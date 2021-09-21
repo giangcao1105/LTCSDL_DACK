@@ -62,5 +62,12 @@ namespace GUI_demo
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác, vui lòng thử lại!");
             }
         }
+
+        private void btDangKy_Click(object sender, EventArgs e)
+        {
+            FDangKy f = new FDangKy();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }

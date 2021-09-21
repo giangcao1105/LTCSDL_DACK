@@ -99,3 +99,7 @@ D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.csproj.GenerateResource.ca
 D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.csproj.CopyComplete
 D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.exe
 D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.pdb
+E:\FolderForBTL_LTCSDL\LTCSDL_DACK\GUI_demo\bin\Debug\EntityFramework.dll
+E:\FolderForBTL_LTCSDL\LTCSDL_DACK\GUI_demo\bin\Debug\EntityFramework.SqlServer.dll
+E:\FolderForBTL_LTCSDL\LTCSDL_DACK\GUI_demo\bin\Debug\EntityFramework.xml
+E:\FolderForBTL_LTCSDL\LTCSDL_DACK\GUI_demo\bin\Debug\EntityFramework.SqlServer.xml
