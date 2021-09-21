@@ -16,7 +16,7 @@ namespace GUI_demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FDangKy());
+            Application.Run(new FDangNhap());
         }
     }
 }

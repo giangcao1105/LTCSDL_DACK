@@ -33,6 +33,11 @@ namespace GUI_demo.GUI
             return kq;
         }
 
+        public Account layThongTinTK(String tk, String mk)
+        {
+            return db.Accounts.FirstOrDefault(s => s.Username == tk && s.Password == mk);
+        }
+
         public void ThemTK(Account tk)
         {
             db.Accounts.Add(tk);

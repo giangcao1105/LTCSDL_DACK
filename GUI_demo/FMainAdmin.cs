@@ -12,9 +12,18 @@ namespace GUI_demo
 {
     public partial class FMainAdmin : Form
     {
+        public int maNV;
         public FMainAdmin()
         {
             InitializeComponent();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FDangNhap f = new FDangNhap();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+            this.Hide();
         }
     }
 }

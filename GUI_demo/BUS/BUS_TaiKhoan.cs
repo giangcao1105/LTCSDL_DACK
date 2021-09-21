@@ -22,6 +22,10 @@ namespace GUI_demo.BUS
         {
             return dTaiKhoan.kiemTraDN(tk, mk);
         }
+        public Account layThongTinTK(String tk, String mk)
+        {
+            return dTaiKhoan.layThongTinTK(tk, mk);
+        }
 
         public bool ThemTK(Account tk)
         {

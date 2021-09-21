@@ -16,5 +16,10 @@ namespace GUI_demo
         {
             InitializeComponent();
         }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
