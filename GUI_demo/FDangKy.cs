@@ -21,5 +21,10 @@ namespace GUI_demo
         {
             Close();
         }
+
+        private void btDangky_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
