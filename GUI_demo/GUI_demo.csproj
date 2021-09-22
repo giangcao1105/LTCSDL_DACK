@@ -92,6 +92,12 @@
     <Compile Include="DAO\DAO_ChucVu.cs" />
     <Compile Include="DAO\DAO_LoaiSanPham.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
+    <Compile Include="FChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChamCong.Designer.cs">
+      <DependentUpon>FChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCTHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="FMainNhanVien.Designer.cs">
       <DependentUpon>FMainNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuanLyChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLyChucVu.Designer.cs">
+      <DependentUpon>FQuanLyChucVu.cs</DependentUpon>
     </Compile>
     <Compile Include="FQuanLyDatHang.cs">
       <SubType>Form</SubType>
@@ -203,6 +215,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChamCong.resx">
+      <DependentUpon>FChamCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCTHD.resx">
       <DependentUpon>FCTHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMainNhanVien.resx">
       <DependentUpon>FMainNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLyChucVu.resx">
+      <DependentUpon>FQuanLyChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLyDatHang.resx">
       <DependentUpon>FQuanLyDatHang.cs</DependentUpon>

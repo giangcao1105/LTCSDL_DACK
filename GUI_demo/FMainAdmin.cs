@@ -41,7 +41,8 @@ namespace GUI_demo
 
         private void chấmCôngNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FChamCong f = new FChamCong();
+            f.Show();
         }
 
         private void quảnLýĐặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
