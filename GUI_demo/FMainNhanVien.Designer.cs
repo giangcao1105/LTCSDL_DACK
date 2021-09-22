@@ -59,6 +59,7 @@
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý đặt hàng";
+            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 

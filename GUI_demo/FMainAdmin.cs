@@ -43,5 +43,12 @@ namespace GUI_demo
         {
 
         }
+
+        private void quảnLýĐặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FQuanLyDatHang f = new FQuanLyDatHang();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }
