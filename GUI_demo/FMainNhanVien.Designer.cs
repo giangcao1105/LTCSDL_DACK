@@ -74,7 +74,7 @@
             this.ClientSize = new System.Drawing.Size(1239, 601);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMainNhanVien";
             this.Text = "FMainNhanVien";
             this.menuStrip1.ResumeLayout(false);

@@ -25,5 +25,12 @@ namespace GUI_demo
             f.Show();
             this.Hide();
         }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FDanhSachNhanVien f = new FDanhSachNhanVien();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }

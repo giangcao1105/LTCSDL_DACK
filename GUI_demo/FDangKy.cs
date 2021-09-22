@@ -15,11 +15,13 @@ namespace GUI_demo
     {
         BUS_NhanVien busNV;
         BUS_TaiKhoan busTK;
+        BUS_ChucVu bChucVu;
         public FDangKy()
         {
             InitializeComponent();
             busNV = new BUS_NhanVien();
             busTK = new BUS_TaiKhoan();
+            bChucVu = new BUS_ChucVu();
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -80,6 +82,16 @@ namespace GUI_demo
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết");
             }
+        }
+
+        private void cbChucVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FDangKy_Load(object sender, EventArgs e)
+        {
+            bChucVu.hienThiDsChucVu(cbChucVu);
         }
     }
 }

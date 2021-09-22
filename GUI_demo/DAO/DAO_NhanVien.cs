@@ -48,5 +48,21 @@ namespace GUI_demo.DAO
             db.NhanViens.Remove(e);
             db.SaveChanges();
         }
+
+        public dynamic hienThiDSNV()
+        {
+            var ds = db.NhanViens.Select(s => new { 
+            
+                s.MaNV,
+                s.HoTenNV,
+                s.GioiTinh,
+                s.ChucVu.TenChucVu,
+                s.NgaySinhNV,
+                s.SDTNV,
+                s.DiaChiNV,
+                s.QueQuanNV
+            }).ToList();
+            return ds;
+        }
     }
 }

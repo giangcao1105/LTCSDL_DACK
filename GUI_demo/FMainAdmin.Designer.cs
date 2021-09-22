@@ -76,6 +76,7 @@
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
             this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
+            this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -124,7 +125,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMainAdmin";
             this.Text = "FMainAdmin";
             this.menuStrip1.ResumeLayout(false);

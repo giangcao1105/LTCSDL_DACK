@@ -73,5 +73,10 @@ namespace GUI_demo.BUS
                 return false;
             }
         }
+
+        public void hienThiDSNV(DataGridView dgv)
+        {
+            dgv.DataSource = dNV.hienThiDSNV();
+        }
     }
 }

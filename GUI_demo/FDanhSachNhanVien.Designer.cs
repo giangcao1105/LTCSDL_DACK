@@ -36,37 +36,27 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dg_nhanvien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdNu = new System.Windows.Forms.RadioButton();
+            this.rdNam = new System.Windows.Forms.RadioButton();
             this.txtmanv = new System.Windows.Forms.TextBox();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txttennv = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbmanv = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.cbQuyen = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTenTK = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.rdNu = new System.Windows.Forms.RadioButton();
-            this.rdNam = new System.Windows.Forms.RadioButton();
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_nhanvien)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox6
@@ -175,6 +165,8 @@
             this.dg_nhanvien.RowTemplate.Height = 28;
             this.dg_nhanvien.Size = new System.Drawing.Size(759, 678);
             this.dg_nhanvien.TabIndex = 0;
+            this.dg_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_nhanvien_CellClick);
+            this.dg_nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_nhanvien_CellContentClick);
             // 
             // groupBox1
             // 
@@ -188,8 +180,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.txtSDT);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txtQueQuan);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txttennv);
             this.groupBox1.Controls.Add(this.label9);
@@ -206,6 +198,33 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // rdNu
+            // 
+            this.rdNu.Checked = true;
+            this.rdNu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.rdNu.Location = new System.Drawing.Point(393, 163);
+            this.rdNu.Margin = new System.Windows.Forms.Padding(4);
+            this.rdNu.Name = "rdNu";
+            this.rdNu.Size = new System.Drawing.Size(113, 31);
+            this.rdNu.TabIndex = 9;
+            this.rdNu.TabStop = true;
+            this.rdNu.Text = "Nữ";
+            this.rdNu.UseVisualStyleBackColor = true;
+            // 
+            // rdNam
+            // 
+            this.rdNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.rdNam.Location = new System.Drawing.Point(232, 163);
+            this.rdNam.Margin = new System.Windows.Forms.Padding(4);
+            this.rdNam.Name = "rdNam";
+            this.rdNam.Size = new System.Drawing.Size(113, 31);
+            this.rdNam.TabIndex = 10;
+            this.rdNam.Text = "Nam";
+            this.rdNam.UseVisualStyleBackColor = true;
             // 
             // txtmanv
             // 
@@ -217,6 +236,34 @@
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(433, 31);
             this.txtmanv.TabIndex = 0;
+            this.txtmanv.TextChanged += new System.EventHandler(this.txtmanv_TextChanged);
+            // 
+            // cbChucVu
+            // 
+            this.cbChucVu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbChucVu.Location = new System.Drawing.Point(231, 125);
+            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(205, 33);
+            this.cbChucVu.TabIndex = 4;
+            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.cbChucVu_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(15, 127);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 27);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Chức vụ:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
@@ -265,6 +312,17 @@
             this.txtSDT.Size = new System.Drawing.Size(433, 30);
             this.txtSDT.TabIndex = 3;
             // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDiaChi.Location = new System.Drawing.Point(233, 284);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(433, 31);
+            this.txtDiaChi.TabIndex = 1;
+            // 
             // txttennv
             // 
             this.txttennv.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -275,6 +333,18 @@
             this.txttennv.Name = "txttennv";
             this.txttennv.Size = new System.Drawing.Size(433, 31);
             this.txttennv.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(15, 280);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(192, 41);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Địa chỉ:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
@@ -312,173 +382,16 @@
             this.lbmanv.Text = "Mã nhân viên:";
             this.lbmanv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.cbQuyen);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.txtMatKhau);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.txtTenTK);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox5.ForeColor = System.Drawing.Color.Red;
-            this.groupBox5.Location = new System.Drawing.Point(16, 388);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(725, 213);
-            this.groupBox5.TabIndex = 17;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thông tin tài khoản";
-            // 
-            // cbQuyen
-            // 
-            this.cbQuyen.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbQuyen.FormattingEnabled = true;
-            this.cbQuyen.Items.AddRange(new object[] {
-            "Nhân Viên",
-            "Admin"});
-            this.cbQuyen.Location = new System.Drawing.Point(231, 170);
-            this.cbQuyen.Margin = new System.Windows.Forms.Padding(4);
-            this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Size = new System.Drawing.Size(171, 33);
-            this.cbQuyen.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(8, 167);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 37);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Quyền:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(536, 126);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 24);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "*";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(537, 62);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 24);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "*";
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMatKhau.Location = new System.Drawing.Point(231, 113);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMatKhau.Multiline = true;
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(297, 30);
-            this.txtMatKhau.TabIndex = 2;
-            this.txtMatKhau.UseSystemPasswordChar = true;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(11, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 37);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Mật khẩu:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtTenTK
-            // 
-            this.txtTenTK.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtTenTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenTK.Location = new System.Drawing.Point(231, 58);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenTK.Multiline = true;
-            this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(297, 30);
-            this.txtTenTK.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(5, 54);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 39);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Tên tài khoản:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(15, 280);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(192, 41);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Quê quán:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtQueQuan
             // 
             this.txtQueQuan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtQueQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQueQuan.Location = new System.Drawing.Point(233, 284);
+            this.txtQueQuan.Location = new System.Drawing.Point(233, 323);
             this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtQueQuan.Multiline = true;
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(433, 31);
             this.txtQueQuan.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(15, 127);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 27);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Chức vụ:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbChucVu
-            // 
-            this.cbChucVu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbChucVu.Location = new System.Drawing.Point(231, 125);
-            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
-            this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(205, 33);
-            this.cbChucVu.TabIndex = 4;
             // 
             // label10
             // 
@@ -492,43 +405,6 @@
             this.label10.Text = "Quê quán:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(233, 323);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 31);
-            this.textBox1.TabIndex = 1;
-            // 
-            // rdNu
-            // 
-            this.rdNu.Checked = true;
-            this.rdNu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.rdNu.Location = new System.Drawing.Point(393, 163);
-            this.rdNu.Margin = new System.Windows.Forms.Padding(4);
-            this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(113, 31);
-            this.rdNu.TabIndex = 9;
-            this.rdNu.TabStop = true;
-            this.rdNu.Text = "Nữ";
-            this.rdNu.UseVisualStyleBackColor = true;
-            // 
-            // rdNam
-            // 
-            this.rdNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.rdNam.Location = new System.Drawing.Point(232, 163);
-            this.rdNam.Margin = new System.Windows.Forms.Padding(4);
-            this.rdNam.Name = "rdNam";
-            this.rdNam.Size = new System.Drawing.Size(113, 31);
-            this.rdNam.TabIndex = 10;
-            this.rdNam.Text = "Nam";
-            this.rdNam.UseVisualStyleBackColor = true;
-            // 
             // FDanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -537,17 +413,15 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDanhSachNhanVien";
             this.Text = "FDanhSachNhanVien";
+            this.Load += new System.EventHandler(this.FDanhSachNhanVien_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg_nhanvien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,24 +444,15 @@
         private System.Windows.Forms.TextBox txttennv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbmanv;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTenTK;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbQuyen;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbChucVu;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtQueQuan;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton rdNu;
         private System.Windows.Forms.RadioButton rdNam;
+        private System.Windows.Forms.TextBox txtQueQuan;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -46,7 +46,7 @@ namespace GUI_demo
                     f.maNV = taiKhoan.MaNV;
                     f.Show();
                     this.Hide();
-                  
+
                 }
                 else
                 {
@@ -54,7 +54,7 @@ namespace GUI_demo
                     f.StartPosition = FormStartPosition.CenterScreen;
                     f.maNV = taiKhoan.MaNV;
                     f.Show();
-                    this.Hide();
+                    this.Close();
                 }
             }
             else
