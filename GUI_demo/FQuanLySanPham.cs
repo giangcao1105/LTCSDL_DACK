@@ -16,5 +16,11 @@ namespace GUI_demo
         {
             InitializeComponent();
         }
+
+        private void themToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FDanhMuc f = new FDanhMuc();
+            f.Show();
+        }
     }
 }
