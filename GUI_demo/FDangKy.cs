@@ -34,6 +34,8 @@ namespace GUI_demo
             bool kq = true;
             if (txtTenTK.Text.Equals("") || txtMauKhau.Text.Equals("") || txtNLMatKhau.Text.Equals("") || txtTenNV.Text.Equals("") || txtSDT.Text.Equals(""))
                 kq = false;
+            if(!txtMauKhau.Text.Equals(txtNLMatKhau.Text))
+                kq = false;
             return kq;
         }
         private void btDangky_Click(object sender, EventArgs e)
@@ -82,11 +84,6 @@ namespace GUI_demo
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết");
             }
-        }
-
-        private void cbChucVu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void FDangKy_Load(object sender, EventArgs e)

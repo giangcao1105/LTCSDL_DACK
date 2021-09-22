@@ -12,15 +12,20 @@ namespace GUI_demo.BUS
     class BUS_NhanVien
     {
         DAO_NhanVien dNV;
-
+        BUS_TaiKhoan bTK;
         public BUS_NhanVien()
         {
             dNV = new DAO_NhanVien();
+            bTK = new BUS_TaiKhoan();
+        }
+
+        public NhanVien layTTNV(int manv)
+        {
+            return dNV.layTTNV(manv);
         }
 
         public bool TaoNV(NhanVien nv)
         {
-
             try
             {
                 dNV.ThemNV(nv);
@@ -59,8 +64,13 @@ namespace GUI_demo.BUS
             {
                 try
                 {
-                    dNV.XoaNV(nv);
-                    return true;
+                    if (bTK.XoaTK(bTK.layTTTK(nv.MaNV)))
+                    {
+                        dNV.XoaNV(nv);
+                        return true;
+                    }
+                    else
+                        return false;
                 }
                 catch (DbUpdateException ex)
                 {

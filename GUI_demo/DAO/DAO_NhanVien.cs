@@ -22,6 +22,13 @@ namespace GUI_demo.DAO
             return false;
         }
 
+        public NhanVien layTTNV(int manv)
+        {
+            NhanVien nv = db.NhanViens.Where(s => s.MaNV == manv).FirstOrDefault();
+
+            return nv;
+        }
+
         public void ThemNV(NhanVien nv)
         {
             db.NhanViens.Add(nv);

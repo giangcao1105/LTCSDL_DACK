@@ -37,7 +37,10 @@ namespace GUI_demo.GUI
         {
             return db.Accounts.FirstOrDefault(s => s.Username == tk && s.Password == mk);
         }
-
+        public Account layTTTK(int manv)
+        {
+            return db.Accounts.FirstOrDefault(s => s.MaNV == manv);
+        }
         public void ThemTK(Account tk)
         {
             db.Accounts.Add(tk);

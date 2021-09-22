@@ -38,5 +38,10 @@ namespace GUI_demo
             FQuanLySanPham f = new FQuanLySanPham();
             f.Show();
         }
+
+        private void chấmCôngNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

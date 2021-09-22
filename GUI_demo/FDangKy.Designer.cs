@@ -81,7 +81,7 @@
             this.btThoat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btThoat.Location = new System.Drawing.Point(441, 581);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(141, 53);
             this.btThoat.TabIndex = 8;
@@ -95,7 +95,7 @@
             this.btDangky.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btDangky.Location = new System.Drawing.Point(125, 581);
-            this.btDangky.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDangky.Margin = new System.Windows.Forms.Padding(4);
             this.btDangky.Name = "btDangky";
             this.btDangky.Size = new System.Drawing.Size(141, 53);
             this.btDangky.TabIndex = 9;
@@ -110,7 +110,7 @@
             this.panel5.Controls.Add(this.rdAdmin);
             this.panel5.Controls.Add(this.label);
             this.panel5.Location = new System.Drawing.Point(55, 500);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(612, 58);
             this.panel5.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.rdNhanVien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rdNhanVien.Location = new System.Drawing.Point(429, 10);
-            this.rdNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.rdNhanVien.Name = "rdNhanVien";
             this.rdNhanVien.Size = new System.Drawing.Size(141, 38);
             this.rdNhanVien.TabIndex = 1;
@@ -134,7 +134,7 @@
             this.rdAdmin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rdAdmin.Location = new System.Drawing.Point(268, 10);
-            this.rdAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rdAdmin.Name = "rdAdmin";
             this.rdAdmin.Size = new System.Drawing.Size(113, 38);
             this.rdAdmin.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(55, 377);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(612, 39);
             this.panel1.TabIndex = 10;
@@ -171,7 +171,7 @@
             this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(268, 1);
-            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(143, 30);
             this.dtpNgaySinh.TabIndex = 3;
@@ -204,7 +204,7 @@
             this.panel6.Controls.Add(this.txtSDT);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(55, 436);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(612, 39);
             this.panel6.TabIndex = 11;
@@ -222,7 +222,7 @@
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(268, 4);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(273, 30);
             this.txtSDT.TabIndex = 1;
@@ -246,7 +246,7 @@
             this.panel4.Controls.Add(this.txtNLMatKhau);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(55, 139);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(612, 41);
             this.panel4.TabIndex = 5;
@@ -264,7 +264,7 @@
             // 
             this.txtNLMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNLMatKhau.Location = new System.Drawing.Point(268, 4);
-            this.txtNLMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNLMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtNLMatKhau.Name = "txtNLMatKhau";
             this.txtNLMatKhau.PasswordChar = '*';
             this.txtNLMatKhau.Size = new System.Drawing.Size(273, 30);
@@ -289,7 +289,7 @@
             this.panel8.Controls.Add(this.txtTenTK);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Location = new System.Drawing.Point(55, 23);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(612, 39);
             this.panel8.TabIndex = 7;
@@ -298,7 +298,7 @@
             // 
             this.txtTenTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTK.Location = new System.Drawing.Point(268, 4);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenTK.Name = "txtTenTK";
             this.txtTenTK.Size = new System.Drawing.Size(273, 30);
             this.txtTenTK.TabIndex = 1;
@@ -322,7 +322,7 @@
             this.panel2.Controls.Add(this.rdNam);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(55, 318);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 39);
             this.panel2.TabIndex = 13;
@@ -333,7 +333,7 @@
             this.rdNu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rdNu.Location = new System.Drawing.Point(429, 4);
-            this.rdNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdNu.Margin = new System.Windows.Forms.Padding(4);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(113, 31);
             this.rdNu.TabIndex = 1;
@@ -346,7 +346,7 @@
             this.rdNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.rdNam.Location = new System.Drawing.Point(268, 4);
-            this.rdNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdNam.Margin = new System.Windows.Forms.Padding(4);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(113, 31);
             this.rdNam.TabIndex = 1;
@@ -381,7 +381,7 @@
             // 
             this.txtMauKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMauKhau.Location = new System.Drawing.Point(268, 4);
-            this.txtMauKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMauKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMauKhau.Name = "txtMauKhau";
             this.txtMauKhau.PasswordChar = '*';
             this.txtMauKhau.Size = new System.Drawing.Size(273, 30);
@@ -394,7 +394,7 @@
             this.panel3.Controls.Add(this.txtMauKhau);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(55, 80);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(612, 41);
             this.panel3.TabIndex = 6;
@@ -406,7 +406,7 @@
             this.panel9.Controls.Add(this.txtTenNV);
             this.panel9.Controls.Add(this.label12);
             this.panel9.Location = new System.Drawing.Point(55, 198);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(612, 41);
             this.panel9.TabIndex = 5;
@@ -424,7 +424,7 @@
             // 
             this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.Location = new System.Drawing.Point(268, 4);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(273, 30);
             this.txtTenNV.TabIndex = 1;
@@ -448,7 +448,7 @@
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Location = new System.Drawing.Point(55, 256);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(612, 41);
             this.panel7.TabIndex = 5;
@@ -463,11 +463,10 @@
             "Nhân viên bán hàng",
             "Nhân viên nhà bếp"});
             this.cbChucVu.Location = new System.Drawing.Point(268, 4);
-            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(205, 33);
             this.cbChucVu.TabIndex = 5;
-            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.cbChucVu_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -506,7 +505,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel8);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDangKy";
             this.Text = "FDangKy";
             this.Load += new System.EventHandler(this.FDangKy_Load);

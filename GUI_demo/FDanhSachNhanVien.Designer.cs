@@ -45,14 +45,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txttennv = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbmanv = new System.Windows.Forms.Label();
-            this.txtQueQuan = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_nhanvien)).BeginInit();
@@ -91,6 +91,7 @@
             this.btHuy.TabIndex = 4;
             this.btHuy.Text = "Hủy";
             this.btHuy.UseVisualStyleBackColor = false;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // btSua
             // 
@@ -106,6 +107,7 @@
             this.btSua.TabIndex = 3;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = false;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btThem
             // 
@@ -137,6 +139,7 @@
             this.btXoa.TabIndex = 2;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // groupBox4
             // 
@@ -166,7 +169,6 @@
             this.dg_nhanvien.Size = new System.Drawing.Size(759, 678);
             this.dg_nhanvien.TabIndex = 0;
             this.dg_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_nhanvien_CellClick);
-            this.dg_nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_nhanvien_CellContentClick);
             // 
             // groupBox1
             // 
@@ -198,7 +200,6 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rdNu
             // 
@@ -236,7 +237,6 @@
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(433, 31);
             this.txtmanv.TabIndex = 0;
-            this.txtmanv.TextChanged += new System.EventHandler(this.txtmanv_TextChanged);
             // 
             // cbChucVu
             // 
@@ -251,7 +251,6 @@
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(205, 33);
             this.cbChucVu.TabIndex = 4;
-            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.cbChucVu_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -312,6 +311,17 @@
             this.txtSDT.Size = new System.Drawing.Size(433, 30);
             this.txtSDT.TabIndex = 3;
             // 
+            // txtQueQuan
+            // 
+            this.txtQueQuan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtQueQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtQueQuan.Location = new System.Drawing.Point(233, 323);
+            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQueQuan.Multiline = true;
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Size = new System.Drawing.Size(433, 31);
+            this.txtQueQuan.TabIndex = 1;
+            // 
             // txtDiaChi
             // 
             this.txtDiaChi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -322,6 +332,18 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(433, 31);
             this.txtDiaChi.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(13, 319);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(192, 41);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Quê quán:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txttennv
             // 
@@ -381,29 +403,6 @@
             this.lbmanv.TabIndex = 0;
             this.lbmanv.Text = "Mã nhân viên:";
             this.lbmanv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtQueQuan
-            // 
-            this.txtQueQuan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtQueQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQueQuan.Location = new System.Drawing.Point(233, 323);
-            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQueQuan.Multiline = true;
-            this.txtQueQuan.Name = "txtQueQuan";
-            this.txtQueQuan.Size = new System.Drawing.Size(433, 31);
-            this.txtQueQuan.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(13, 319);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(192, 41);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Quê quán:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FDanhSachNhanVien
             // 

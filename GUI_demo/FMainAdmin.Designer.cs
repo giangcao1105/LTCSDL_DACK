@@ -70,6 +70,7 @@
             this.chấmCôngNhânViênToolStripMenuItem.Name = "chấmCôngNhânViênToolStripMenuItem";
             this.chấmCôngNhânViênToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.chấmCôngNhânViênToolStripMenuItem.Text = "Chấm công nhân viên";
+            this.chấmCôngNhânViênToolStripMenuItem.Click += new System.EventHandler(this.chấmCôngNhânViênToolStripMenuItem_Click);
             // 
             // danhSáchNhânViênToolStripMenuItem
             // 

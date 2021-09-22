@@ -71,6 +71,8 @@
     <Compile Include="BangChamCong.cs">
       <DependentUpon>QLCuaHangBanBanhNgot.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BUS_ChucVu.cs" />
+    <Compile Include="BUS\BUS_LoaiSanPham.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_TaiKhoan.cs" />
     <Compile Include="ChucVu.cs">
@@ -85,6 +87,8 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DAO_ChucVu.cs" />
+    <Compile Include="DAO\DAO_LoaiSanPham.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="FCTHD.cs">
       <SubType>Form</SubType>

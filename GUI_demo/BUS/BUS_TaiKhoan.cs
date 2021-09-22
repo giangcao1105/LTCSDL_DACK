@@ -60,7 +60,10 @@ namespace GUI_demo.BUS
                 return false;
             }
         }
-
+        public Account layTTTK(int manv)
+        {
+            return dTaiKhoan.layTTTK(manv);
+        }
         public bool XoaTK(Account tk)
         {
             if (dTaiKhoan.kiemTraTKTonTai(tk.Username))
