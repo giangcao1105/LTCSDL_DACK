@@ -21,6 +21,12 @@ namespace GUI_demo.DAO
                 return true;
             return false;
         }
+
+        public Ban layTTBan(int maBan)
+        {
+            return db.Bans.Where(s => s.MaBan == maBan).FirstOrDefault();
+        }
+
         public void ThemBan(Ban b)
         {
             db.Bans.Add(b);

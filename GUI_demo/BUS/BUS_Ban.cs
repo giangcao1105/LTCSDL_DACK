@@ -18,6 +18,11 @@ namespace GUI_demo.BUS
             dBan = new DAO_Ban();
         }
 
+        public Ban layTTBan(int maBan)
+        {
+            return dBan.layTTBan(maBan);
+        }
+
         public bool TaoBan(Ban b)
         {
             try

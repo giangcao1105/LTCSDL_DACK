@@ -23,11 +23,13 @@ namespace GUI_demo
         public int MaHD { get; set; }
         public int MaNV { get; set; }
         public int MaBan { get; set; }
+        public int TrangThaiTT { get; internal set; }
         public System.DateTime NgayBan { get; set; }
     
         public virtual Ban Ban { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHD> CTHDs { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+
     }
 }

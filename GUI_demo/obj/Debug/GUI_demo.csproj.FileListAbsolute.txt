@@ -148,3 +148,5 @@ E:\FolderForBTL_LTCSDL2\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.csproj.CoreCompi
 E:\FolderForBTL_LTCSDL2\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.csproj.CopyComplete
 E:\FolderForBTL_LTCSDL2\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.exe
 E:\FolderForBTL_LTCSDL2\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.pdb
+D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.FChamCong.resources
+D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.FQuanLyChucVu.resources

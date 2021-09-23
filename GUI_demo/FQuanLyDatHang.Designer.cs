@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DSMON = new System.Windows.Forms.GroupBox();
-            this.dg_monan_ofban = new System.Windows.Forms.DataGridView();
+            this.gV_CTHD = new System.Windows.Forms.DataGridView();
             this.THUCDON = new System.Windows.Forms.GroupBox();
             this.btSua = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.lbthemban = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.DSMON.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_monan_ofban)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gV_CTHD)).BeginInit();
             this.THUCDON.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericsoluongdoan)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -65,40 +65,40 @@
             // DSMON
             // 
             this.DSMON.BackColor = System.Drawing.Color.Transparent;
-            this.DSMON.Controls.Add(this.dg_monan_ofban);
+            this.DSMON.Controls.Add(this.gV_CTHD);
             this.DSMON.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.DSMON.ForeColor = System.Drawing.Color.Red;
             this.DSMON.Location = new System.Drawing.Point(679, 177);
-            this.DSMON.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DSMON.Margin = new System.Windows.Forms.Padding(4);
             this.DSMON.Name = "DSMON";
-            this.DSMON.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DSMON.Padding = new System.Windows.Forms.Padding(4);
             this.DSMON.Size = new System.Drawing.Size(827, 634);
             this.DSMON.TabIndex = 7;
             this.DSMON.TabStop = false;
             this.DSMON.Text = "Danh sách món ăn của bàn:";
             // 
-            // dg_monan_ofban
+            // gV_CTHD
             // 
-            this.dg_monan_ofban.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_monan_ofban.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dg_monan_ofban.BackgroundColor = System.Drawing.Color.Azure;
-            this.dg_monan_ofban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_monan_ofban.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_monan_ofban.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dg_monan_ofban.EnableHeadersVisualStyles = false;
-            this.dg_monan_ofban.Location = new System.Drawing.Point(4, 26);
-            this.dg_monan_ofban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dg_monan_ofban.Name = "dg_monan_ofban";
-            this.dg_monan_ofban.RowHeadersWidth = 62;
-            this.dg_monan_ofban.Size = new System.Drawing.Size(819, 604);
-            this.dg_monan_ofban.TabIndex = 0;
+            this.gV_CTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gV_CTHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gV_CTHD.BackgroundColor = System.Drawing.Color.Azure;
+            this.gV_CTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gV_CTHD.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gV_CTHD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gV_CTHD.EnableHeadersVisualStyles = false;
+            this.gV_CTHD.Location = new System.Drawing.Point(4, 26);
+            this.gV_CTHD.Margin = new System.Windows.Forms.Padding(4);
+            this.gV_CTHD.Name = "gV_CTHD";
+            this.gV_CTHD.RowHeadersWidth = 62;
+            this.gV_CTHD.Size = new System.Drawing.Size(819, 604);
+            this.gV_CTHD.TabIndex = 0;
             // 
             // THUCDON
             // 
@@ -120,9 +120,9 @@
             this.THUCDON.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.THUCDON.ForeColor = System.Drawing.Color.Red;
             this.THUCDON.Location = new System.Drawing.Point(679, 15);
-            this.THUCDON.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.THUCDON.Margin = new System.Windows.Forms.Padding(4);
             this.THUCDON.Name = "THUCDON";
-            this.THUCDON.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.THUCDON.Padding = new System.Windows.Forms.Padding(4);
             this.THUCDON.Size = new System.Drawing.Size(827, 153);
             this.THUCDON.TabIndex = 6;
             this.THUCDON.TabStop = false;
@@ -132,12 +132,13 @@
             // 
             this.btSua.ForeColor = System.Drawing.Color.Black;
             this.btSua.Location = new System.Drawing.Point(687, 26);
-            this.btSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(132, 48);
             this.btSua.TabIndex = 18;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // txtGia
             // 
@@ -154,7 +155,7 @@
             this.cbiddouong.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbiddouong.FormattingEnabled = true;
             this.cbiddouong.Location = new System.Drawing.Point(473, 27);
-            this.cbiddouong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbiddouong.Margin = new System.Windows.Forms.Padding(4);
             this.cbiddouong.Name = "cbiddouong";
             this.cbiddouong.Size = new System.Drawing.Size(44, 32);
             this.cbiddouong.TabIndex = 14;
@@ -165,7 +166,7 @@
             this.cbten.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbten.FormattingEnabled = true;
             this.cbten.Location = new System.Drawing.Point(123, 63);
-            this.cbten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbten.Margin = new System.Windows.Forms.Padding(4);
             this.cbten.Name = "cbten";
             this.cbten.Size = new System.Drawing.Size(344, 32);
             this.cbten.TabIndex = 16;
@@ -176,7 +177,7 @@
             this.cbiddm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbiddm.FormattingEnabled = true;
             this.cbiddm.Location = new System.Drawing.Point(473, 63);
-            this.cbiddm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbiddm.Margin = new System.Windows.Forms.Padding(4);
             this.cbiddm.Name = "cbiddm";
             this.cbiddm.Size = new System.Drawing.Size(44, 32);
             this.cbiddm.TabIndex = 13;
@@ -201,12 +202,13 @@
             this.btThanhToan.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btThanhToan.Location = new System.Drawing.Point(687, 79);
-            this.btThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThanhToan.Margin = new System.Windows.Forms.Padding(4);
             this.btThanhToan.Name = "btThanhToan";
             this.btThanhToan.Size = new System.Drawing.Size(132, 48);
             this.btThanhToan.TabIndex = 12;
             this.btThanhToan.Text = "Thanh toán";
             this.btThanhToan.UseVisualStyleBackColor = false;
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // btXoa
             // 
@@ -215,12 +217,13 @@
             this.btXoa.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btXoa.Location = new System.Drawing.Point(527, 79);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(132, 48);
             this.btXoa.TabIndex = 10;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btThem
             // 
@@ -229,12 +232,13 @@
             this.btThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThem.Location = new System.Drawing.Point(527, 23);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(132, 48);
             this.btThem.TabIndex = 9;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // numericsoluongdoan
             // 
@@ -242,7 +246,7 @@
             this.numericsoluongdoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.numericsoluongdoan.ForeColor = System.Drawing.SystemColors.ControlText;
             this.numericsoluongdoan.Location = new System.Drawing.Point(123, 103);
-            this.numericsoluongdoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericsoluongdoan.Margin = new System.Windows.Forms.Padding(4);
             this.numericsoluongdoan.Name = "numericsoluongdoan";
             this.numericsoluongdoan.Size = new System.Drawing.Size(75, 29);
             this.numericsoluongdoan.TabIndex = 8;
@@ -271,7 +275,7 @@
             this.cbdanhmuc.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbdanhmuc.FormattingEnabled = true;
             this.cbdanhmuc.Location = new System.Drawing.Point(123, 26);
-            this.cbdanhmuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbdanhmuc.Margin = new System.Windows.Forms.Padding(4);
             this.cbdanhmuc.Name = "cbdanhmuc";
             this.cbdanhmuc.Size = new System.Drawing.Size(344, 32);
             this.cbdanhmuc.TabIndex = 2;
@@ -312,9 +316,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(652, 814);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -324,7 +328,7 @@
             // 
             this.dg_dsban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_dsban.Location = new System.Drawing.Point(509, 20);
-            this.dg_dsban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dg_dsban.Margin = new System.Windows.Forms.Padding(4);
             this.dg_dsban.Name = "dg_dsban";
             this.dg_dsban.RowHeadersWidth = 62;
             this.dg_dsban.Size = new System.Drawing.Size(32, 20);
@@ -337,7 +341,7 @@
             this.btXoaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btXoaBan.ForeColor = System.Drawing.Color.Black;
             this.btXoaBan.Location = new System.Drawing.Point(409, 20);
-            this.btXoaBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoaBan.Margin = new System.Windows.Forms.Padding(4);
             this.btXoaBan.Name = "btXoaBan";
             this.btXoaBan.Size = new System.Drawing.Size(89, 27);
             this.btXoaBan.TabIndex = 6;
@@ -352,7 +356,7 @@
             this.btthemban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btthemban.ForeColor = System.Drawing.Color.Black;
             this.btthemban.Location = new System.Drawing.Point(313, 20);
-            this.btthemban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btthemban.Margin = new System.Windows.Forms.Padding(4);
             this.btthemban.Name = "btthemban";
             this.btthemban.Size = new System.Drawing.Size(89, 27);
             this.btthemban.TabIndex = 6;
@@ -366,7 +370,7 @@
             this.Soban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Soban.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Soban.Location = new System.Drawing.Point(229, 20);
-            this.Soban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Soban.Margin = new System.Windows.Forms.Padding(4);
             this.Soban.Name = "Soban";
             this.Soban.Size = new System.Drawing.Size(76, 26);
             this.Soban.TabIndex = 5;
@@ -396,7 +400,7 @@
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 63);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(636, 737);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -409,11 +413,12 @@
             this.Controls.Add(this.DSMON);
             this.Controls.Add(this.THUCDON);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FQuanLyDatHang";
             this.Text = "FQuanLyDatHang";
+            this.Load += new System.EventHandler(this.FQuanLyDatHang_Load);
             this.DSMON.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_monan_ofban)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gV_CTHD)).EndInit();
             this.THUCDON.ResumeLayout(false);
             this.THUCDON.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericsoluongdoan)).EndInit();
@@ -428,7 +433,7 @@
         #endregion
 
         public System.Windows.Forms.GroupBox DSMON;
-        public System.Windows.Forms.DataGridView dg_monan_ofban;
+        public System.Windows.Forms.DataGridView gV_CTHD;
         private System.Windows.Forms.GroupBox THUCDON;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.ComboBox cbiddouong;

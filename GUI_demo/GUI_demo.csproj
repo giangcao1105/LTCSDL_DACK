@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="BUS\BUS_Ban.cs" />
     <Compile Include="BUS\BUS_ChucVu.cs" />
+    <Compile Include="BUS\BUS_HoaDon.cs" />
     <Compile Include="BUS\BUS_LoaiSanPham.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_TaiKhoan.cs" />
@@ -90,6 +91,7 @@
     </Compile>
     <Compile Include="DAO\DAO_Ban.cs" />
     <Compile Include="DAO\DAO_ChucVu.cs" />
+    <Compile Include="DAO\DAO_HoaDon.cs" />
     <Compile Include="DAO\DAO_LoaiSanPham.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="FChamCong.cs">

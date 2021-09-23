@@ -15,7 +15,7 @@ namespace GUI_demo
     {
         BUS_NhanVien bNhanVien;
         BUS_ChucVu bChucVu;
-        
+
         public FDanhSachNhanVien()
         {
             InitializeComponent();
@@ -107,7 +107,7 @@ namespace GUI_demo
             try
             {
                 NhanVien nv = bNhanVien.layTTNV(int.Parse(txtmanv.Text));
-                
+
                 if (bNhanVien.XoaNV(nv))
                 {
                     MessageBox.Show("Xóa nhân viên thành công");
