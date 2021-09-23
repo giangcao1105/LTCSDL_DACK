@@ -8,33 +8,37 @@ using GUI_demo.DAO;
 
 namespace GUI_demo.BUS
 {
-    class BUS_LoaiSanPham
+    class BUS_SanPham
     {
-        DAO_LoaiSanPham dLoaiSanPham;
-        public BUS_LoaiSanPham()
+        DAO_SanPham dSanPham;
+        public BUS_SanPham()
         {
-            dLoaiSanPham = new DAO_LoaiSanPham();
+            dSanPham = new DAO_SanPham();
         }
 
-        public void hienThiDSLoaiSP(DataGridView dgv)
+        public void hienThiDSSP(DataGridView dgv)
         {
-            dgv.DataSource = dLoaiSanPham.layDSLoaiSP();
+            dgv.DataSource = dSanPham.hienThiDSSP();
         }
-
-        public void hienThiDSLoaiSP(ComboBox cb)
+        public void hienThiDSSP(ComboBox cb)
         {
-            cb.DataSource = dLoaiSanPham.layDSLoaiSP();
+            cb.DataSource = dSanPham.hienThiDSSP2();
+            cb.DisplayMember = "TenSP";
+            cb.ValueMember = "MaSP";
+        }
+        public void layLoaiSP(ComboBox cb, int maSP)
+        {
+            cb.DataSource = dSanPham.hienThiLoaiSP(maSP);
             cb.DisplayMember = "TenLoaiSP";
             cb.ValueMember = "MaLoaiSP";
         }
-        
-        public bool themLoaiSanPhan(LoaiSP lsp)
+        public bool themSanPhan(SanPham sp)
         {
             //using (var trac = new TransactionScope())
             {
                 try
                 {
-                    dLoaiSanPham.themLoaiSP(lsp);
+                    dSanPham.themSP(sp);
                     return true;
                 }
                 catch (Exception)
@@ -45,11 +49,11 @@ namespace GUI_demo.BUS
             }
         }
 
-        public bool capNhatSanPham(int maSp, LoaiSP lsp)
+        public bool capNhatSanPham(int maSp, SanPham sp)
         {
             try
             {
-                dLoaiSanPham.capNhatSP(maSp, lsp);
+                dSanPham.capNhatSP(maSp, sp);
                 return true;
             }
             catch (Exception)
@@ -63,7 +67,7 @@ namespace GUI_demo.BUS
         {
             try
             {
-                dLoaiSanPham.xoaSP(maSp);
+                dSanPham.xoaSP(maSp);
                 return true;
             }
             catch (Exception)

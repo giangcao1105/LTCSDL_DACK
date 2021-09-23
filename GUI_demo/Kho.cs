@@ -17,7 +17,6 @@ namespace GUI_demo
         public int MaSP { get; set; }
         public System.DateTime NgayNhapSP { get; set; }
         public int SoLuong { get; set; }
-        public double DonGia { get; set; }
     
         public virtual SanPham SanPham { get; set; }
     }

@@ -8,33 +8,24 @@ using GUI_demo.DAO;
 
 namespace GUI_demo.BUS
 {
-    class BUS_LoaiSanPham
+    class BUS_Kho
     {
-        DAO_LoaiSanPham dLoaiSanPham;
-        public BUS_LoaiSanPham()
+        DAO_Kho dKho;
+        public BUS_Kho()
         {
-            dLoaiSanPham = new DAO_LoaiSanPham();
+            dKho = new DAO_Kho();
         }
-
-        public void hienThiDSLoaiSP(DataGridView dgv)
+        public void hienThiKho(DataGridView dgv)
         {
-            dgv.DataSource = dLoaiSanPham.layDSLoaiSP();
+            dgv.DataSource = dKho.hienThiKho();
         }
-
-        public void hienThiDSLoaiSP(ComboBox cb)
-        {
-            cb.DataSource = dLoaiSanPham.layDSLoaiSP();
-            cb.DisplayMember = "TenLoaiSP";
-            cb.ValueMember = "MaLoaiSP";
-        }
-        
-        public bool themLoaiSanPhan(LoaiSP lsp)
+        public bool themKho(Kho k)
         {
             //using (var trac = new TransactionScope())
             {
                 try
                 {
-                    dLoaiSanPham.themLoaiSP(lsp);
+                    dKho.themKho(k);
                     return true;
                 }
                 catch (Exception)
@@ -45,11 +36,11 @@ namespace GUI_demo.BUS
             }
         }
 
-        public bool capNhatSanPham(int maSp, LoaiSP lsp)
+        public bool capNhatKho(int maSp, DateTime ngayNhap,Kho k)
         {
             try
             {
-                dLoaiSanPham.capNhatSP(maSp, lsp);
+                dKho.capNhatKho(maSp, ngayNhap,k);
                 return true;
             }
             catch (Exception)
@@ -59,11 +50,11 @@ namespace GUI_demo.BUS
             }
         }
 
-        public bool xoaSanPham(int maSp)
+        public bool xoaKho(int maSp,DateTime ngayNhap)
         {
             try
             {
-                dLoaiSanPham.xoaSP(maSp);
+                dKho.xoaSP(maSp,ngayNhap);
                 return true;
             }
             catch (Exception)
