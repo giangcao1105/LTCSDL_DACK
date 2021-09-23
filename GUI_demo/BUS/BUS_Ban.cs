@@ -68,7 +68,7 @@ namespace GUI_demo.BUS
                 }
                 catch (DbUpdateException ex)
                 {
-                    MessageBox.Show("Bàn này không thể xóa!);
+                    MessageBox.Show("Bàn này không thể xóa!");
                     return false;
                 }
             }

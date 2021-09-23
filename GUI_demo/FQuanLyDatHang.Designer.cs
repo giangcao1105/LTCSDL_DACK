@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DSMON = new System.Windows.Forms.GroupBox();
             this.gV_CTHD = new System.Windows.Forms.DataGridView();
             this.THUCDON = new System.Windows.Forms.GroupBox();
             this.btSua = new System.Windows.Forms.Button();
-            this.txtGia = new System.Windows.Forms.TextBox();
-            this.cbiddouong = new System.Windows.Forms.ComboBox();
+            this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.cbten = new System.Windows.Forms.ComboBox();
-            this.cbiddm = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btThanhToan = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -47,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dg_dsban = new System.Windows.Forms.DataGridView();
             this.btXoaBan = new System.Windows.Forms.Button();
             this.btthemban = new System.Windows.Forms.Button();
             this.Soban = new System.Windows.Forms.NumericUpDown();
@@ -58,7 +55,6 @@
             this.THUCDON.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericsoluongdoan)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_dsban)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Soban)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,14 +79,14 @@
             this.gV_CTHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gV_CTHD.BackgroundColor = System.Drawing.Color.Azure;
             this.gV_CTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gV_CTHD.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gV_CTHD.DefaultCellStyle = dataGridViewCellStyle2;
             this.gV_CTHD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gV_CTHD.EnableHeadersVisualStyles = false;
             this.gV_CTHD.Location = new System.Drawing.Point(4, 26);
@@ -106,10 +102,8 @@
             // 
             this.THUCDON.BackColor = System.Drawing.Color.Transparent;
             this.THUCDON.Controls.Add(this.btSua);
-            this.THUCDON.Controls.Add(this.txtGia);
-            this.THUCDON.Controls.Add(this.cbiddouong);
+            this.THUCDON.Controls.Add(this.txtGiamGia);
             this.THUCDON.Controls.Add(this.cbten);
-            this.THUCDON.Controls.Add(this.cbiddm);
             this.THUCDON.Controls.Add(this.label4);
             this.THUCDON.Controls.Add(this.btThanhToan);
             this.THUCDON.Controls.Add(this.btXoa);
@@ -142,25 +136,14 @@
             this.btSua.UseVisualStyleBackColor = true;
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
-            // txtGia
+            // txtGiamGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(265, 103);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.ReadOnly = true;
-            this.txtGia.Size = new System.Drawing.Size(100, 29);
-            this.txtGia.TabIndex = 17;
-            // 
-            // cbiddouong
-            // 
-            this.cbiddouong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbiddouong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbiddouong.FormattingEnabled = true;
-            this.cbiddouong.Location = new System.Drawing.Point(473, 27);
-            this.cbiddouong.Margin = new System.Windows.Forms.Padding(4);
-            this.cbiddouong.Name = "cbiddouong";
-            this.cbiddouong.Size = new System.Drawing.Size(44, 32);
-            this.cbiddouong.TabIndex = 14;
+            this.txtGiamGia.BackColor = System.Drawing.Color.White;
+            this.txtGiamGia.Location = new System.Drawing.Point(298, 103);
+            this.txtGiamGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGiamGia.Name = "txtGiamGia";
+            this.txtGiamGia.Size = new System.Drawing.Size(169, 29);
+            this.txtGiamGia.TabIndex = 17;
             // 
             // cbten
             // 
@@ -173,28 +156,17 @@
             this.cbten.Size = new System.Drawing.Size(344, 32);
             this.cbten.TabIndex = 16;
             // 
-            // cbiddm
-            // 
-            this.cbiddm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbiddm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbiddm.FormattingEnabled = true;
-            this.cbiddm.Location = new System.Drawing.Point(473, 63);
-            this.cbiddm.Margin = new System.Windows.Forms.Padding(4);
-            this.cbiddm.Name = "cbiddm";
-            this.cbiddm.Size = new System.Drawing.Size(44, 32);
-            this.cbiddm.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(204, 106);
+            this.label4.Location = new System.Drawing.Point(208, 106);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 24);
+            this.label4.Size = new System.Drawing.Size(84, 24);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Phần";
+            this.label4.Text = "Giảm giá";
             // 
             // btThanhToan
             // 
@@ -250,7 +222,7 @@
             this.numericsoluongdoan.Location = new System.Drawing.Point(123, 103);
             this.numericsoluongdoan.Margin = new System.Windows.Forms.Padding(4);
             this.numericsoluongdoan.Name = "numericsoluongdoan";
-            this.numericsoluongdoan.Size = new System.Drawing.Size(75, 29);
+            this.numericsoluongdoan.Size = new System.Drawing.Size(58, 29);
             this.numericsoluongdoan.TabIndex = 8;
             this.numericsoluongdoan.Value = new decimal(new int[] {
             1,
@@ -310,7 +282,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dg_dsban);
             this.groupBox1.Controls.Add(this.btXoaBan);
             this.groupBox1.Controls.Add(this.btthemban);
             this.groupBox1.Controls.Add(this.Soban);
@@ -326,16 +297,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sơ đồ bàn";
-            // 
-            // dg_dsban
-            // 
-            this.dg_dsban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_dsban.Location = new System.Drawing.Point(509, 20);
-            this.dg_dsban.Margin = new System.Windows.Forms.Padding(4);
-            this.dg_dsban.Name = "dg_dsban";
-            this.dg_dsban.RowHeadersWidth = 62;
-            this.dg_dsban.Size = new System.Drawing.Size(32, 20);
-            this.dg_dsban.TabIndex = 7;
             // 
             // btXoaBan
             // 
@@ -427,7 +388,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericsoluongdoan)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_dsban)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Soban)).EndInit();
             this.ResumeLayout(false);
 
@@ -438,10 +398,8 @@
         public System.Windows.Forms.GroupBox DSMON;
         public System.Windows.Forms.DataGridView gV_CTHD;
         private System.Windows.Forms.GroupBox THUCDON;
-        private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.ComboBox cbiddouong;
+        private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.ComboBox cbten;
-        private System.Windows.Forms.ComboBox cbiddm;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btThanhToan;
         private System.Windows.Forms.Button btXoa;
@@ -452,7 +410,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dg_dsban;
         private System.Windows.Forms.Button btXoaBan;
         private System.Windows.Forms.Button btthemban;
         private System.Windows.Forms.NumericUpDown Soban;

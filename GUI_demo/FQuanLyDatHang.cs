@@ -41,6 +41,25 @@ namespace GUI_demo
             gV_CTHD.Columns[2].Width = (int)(gV_CTHD.Width * 0.15);
             gV_CTHD.Columns[3].Width = (int)(gV_CTHD.Width * 0.15);
         }
+
+        public void kiemTraCTHD()       {
+            if(bHoaDon.hienThiDSCTHD2(maHDClick).Count == 0)
+            {
+                try
+                {
+                    bHoaDon.XoaHD(bHoaDon.layTTHoaDon(maHDClick));
+                    Ban b = bBan.layTTBan(maBanClick);
+                    b.TrangThai = "Trống";
+                    bBan.SuaBan(b);
+                    loadDSBan();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Lỗi");
+                }
+            }
+        }
+
         public void loadDSBan()
         {
             flowLayoutPanel1.Controls.Clear();
@@ -168,7 +187,10 @@ namespace GUI_demo
                 cthd.MaHD = maHDClick;
                 cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
                 cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
-                cthd.GiamGia = 0;
+                if (txtGiamGia.Text != "")
+                    cthd.GiamGia = double.Parse(txtGiamGia.Text);
+                else
+                    cthd.GiamGia = 0;
                 cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
                 numericsoluongdoan.Value = 1;
 
@@ -214,7 +236,10 @@ namespace GUI_demo
                 cthd.MaHD = maHDClick;
                 cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
                 cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
-                cthd.GiamGia = 0;
+                if (txtGiamGia.Text != "")
+                    cthd.GiamGia = double.Parse(txtGiamGia.Text);
+                else
+                    cthd.GiamGia = 0;
                 cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
 
                 if (numericsoluongdoan.Value == 0)
@@ -223,6 +248,7 @@ namespace GUI_demo
                     {
                         MessageBox.Show("Sửa thông tin CTHD thành công");
                         hienThiDSCTHD(maHDClick);
+                        kiemTraCTHD();
                     }
                     else
                         MessageBox.Show("Sửa thông tin CTHD thất bại");
@@ -252,13 +278,17 @@ namespace GUI_demo
                 cthd.MaHD = maHDClick;
                 cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
                 cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
-                cthd.GiamGia = 0;
+                if (txtGiamGia.Text != "")
+                    cthd.GiamGia = double.Parse(txtGiamGia.Text);
+                else
+                    cthd.GiamGia = 0;
                 cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
 
                 if (bHoaDon.XoaCTHD(cthd))
                 {
                     MessageBox.Show("Xóa thông tin CTHD thành công");
                     hienThiDSCTHD(maHDClick);
+                    kiemTraCTHD();
                 }
                 else
                     MessageBox.Show("Xóa thông tin CTHD thất bại");
@@ -290,6 +320,7 @@ namespace GUI_demo
                         cbdanhmuc.SelectedValue = sp.MaLoaiSP;
                         cbten.SelectedValue = sp.MaSP;
                         numericsoluongdoan.Value = decimal.Parse(gV_CTHD.Rows[e.RowIndex].Cells[2].Value.ToString());
+                        txtGiamGia.Text = gV_CTHD.Rows[e.RowIndex].Cells[3].Value.ToString();
                     }
                 }
             }
