@@ -76,6 +76,11 @@ namespace GUI_demo.DAO
             }).ToList();
             return ds;
         }
+
+        public List<CTHD> hienThiDSCTHD2(int mahd)
+        {
+            return db.CTHDs.Where(s => s.MaHD == mahd).Select(s => s).ToList();
+        }
         public void ThemCTHD(CTHD cthd)
         {
             db.CTHDs.Add(cthd);

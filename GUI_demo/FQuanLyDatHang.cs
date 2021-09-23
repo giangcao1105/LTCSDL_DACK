@@ -15,32 +15,31 @@ namespace GUI_demo
     {
         BUS_Ban bBan;
         BUS_HoaDon bHoaDon;
-       
-        bool ktClick;
+        BUS_LoaiSanPham bLoaiSP;
+        BUS_SanPham bSP;
+
+        public int manv;
+        bool ktClick, ktHoaDon;
         int maBanLonNhat = 0;
         int maBanClick;
+        int maHDClick;
         public FQuanLyDatHang()
         {
             InitializeComponent();
             bBan = new BUS_Ban();
             bHoaDon = new BUS_HoaDon();
+            bLoaiSP = new BUS_LoaiSanPham();
+            bSP = new BUS_SanPham();
         }
 
         private void hienThiDSCTHD(int mahd)
         {
-            try
-            {
-                gV_CTHD.DataSource = null;
-                bHoaDon.hienThiDSCTHD(gV_CTHD, mahd);
-                gV_CTHD.Columns[0].Width = (int)(gV_CTHD.Width * 0.35);
-                gV_CTHD.Columns[1].Width = (int)(gV_CTHD.Width * 0.2);
-                gV_CTHD.Columns[2].Width = (int)(gV_CTHD.Width * 0.1);
-                gV_CTHD.Columns[3].Width = (int)(gV_CTHD.Width * 0.2);
-            }
-            catch (Exception)
-            {
-
-            }
+            gV_CTHD.DataSource = null;
+            bHoaDon.hienThiDSCTHD(gV_CTHD, mahd);
+            gV_CTHD.Columns[0].Width = (int)(gV_CTHD.Width * 0.35);
+            gV_CTHD.Columns[1].Width = (int)(gV_CTHD.Width * 0.2);
+            gV_CTHD.Columns[2].Width = (int)(gV_CTHD.Width * 0.15);
+            gV_CTHD.Columns[3].Width = (int)(gV_CTHD.Width * 0.15);
         }
         public void loadDSBan()
         {
@@ -72,10 +71,24 @@ namespace GUI_demo
         {
             ktClick = true;
             maBanClick = ((sender as Button).Tag as Ban).MaBan;
-            
-            hienThiDSCTHD(bHoaDon.layTTHoaDonChuaThanhToan(maBanClick).MaHD);
-            
+
+            if (bHoaDon.layTTHoaDonChuaThanhToan(maBanClick) != null)
+            {
+                maHDClick = bHoaDon.layTTHoaDonChuaThanhToan(maBanClick).MaHD;
+                ktHoaDon = true;
+                hienThiDSCTHD(maHDClick);
+            }
+            else
+            {
+                gV_CTHD.DataSource = null;
+                ktHoaDon = false;
+            }
+
+            bLoaiSP.hienThiDSLoaiSP(cbdanhmuc);
+            bSP.hienThiDSSP2(cbten, int.Parse(cbdanhmuc.SelectedValue.ToString()));
+            DSMON.Text = "Danh sách món ăn của bàn: " + maBanClick;
         }
+
         private void btthemban_Click(object sender, EventArgs e)
         {
             ktClick = false;
@@ -89,6 +102,7 @@ namespace GUI_demo
                 bBan.TaoBan(b);
             }
             loadDSBan();
+            DSMON.Text = "Danh sách món ăn của bàn:";
         }
 
         private void btXoaBan_Click(object sender, EventArgs e)
@@ -102,6 +116,7 @@ namespace GUI_demo
                     {
                         MessageBox.Show("Xóa bàn thành công");
                         loadDSBan();
+                        DSMON.Text = "Danh sách món ăn của bàn:";
                     }
                     else
                         MessageBox.Show("Xóa bàn thất bại");
@@ -126,22 +141,175 @@ namespace GUI_demo
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                bool flag = true;
 
-        }
+                if (!ktHoaDon)
+                {
+                    HoaDon hd = new HoaDon();
+                    hd.MaNV = manv;
+                    hd.MaBan = maBanClick;
+                    DateTime date = DateTime.Now;
+                    DateTime d1 = new DateTime(date.Year, date.Month, date.Day);
+                    hd.NgayBan = d1;
+                    hd.TrangThaiTT = 0;
 
-        private void btXoa_Click(object sender, EventArgs e)
-        {
+                    bHoaDon.ThemHD(hd);
+                    Ban b = bBan.layTTBan(maBanClick);
+                    b.TrangThai = "Có người";
+                    bBan.SuaBan(b);
+                    maHDClick = hd.MaHD;
+                    ktHoaDon = true;
+                    loadDSBan();
+                }
 
+                CTHD cthd = new CTHD();
+                cthd.MaHD = maHDClick;
+                cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
+                cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
+                cthd.GiamGia = 0;
+                cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
+                numericsoluongdoan.Value = 1;
+
+                foreach(CTHD ct in bHoaDon.hienThiDSCTHD2(maHDClick))
+                {
+                    if(ct.MaSP == cthd.MaSP)
+                    {
+                        cthd.SoLuong += ct.SoLuong;
+                        flag = false;
+                        if (bHoaDon.SuaCTHD(cthd))
+                        {
+                            MessageBox.Show("Thêm CTHD thành công");
+                            hienThiDSCTHD(maHDClick);
+                        }
+                        else
+                            MessageBox.Show("Thêm CTHD thất bại");
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    if (bHoaDon.ThemCTHD(cthd))
+                    {
+                        MessageBox.Show("Thêm CTHD thành công");
+                        hienThiDSCTHD(maHDClick);
+                    }
+                    else
+                        MessageBox.Show("Thêm CTHD thất bại"); 
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thêm CTHD  thất bại");
+            }
         }
 
         private void btSua_Click(object sender, EventArgs e)
         {
+            try
+            {
+                CTHD cthd = new CTHD();
+                cthd.MaHD = maHDClick;
+                cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
+                cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
+                cthd.GiamGia = 0;
+                cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
 
+                if (numericsoluongdoan.Value == 0)
+                {
+                    if (bHoaDon.XoaCTHD(cthd))
+                    {
+                        MessageBox.Show("Sửa thông tin CTHD thành công");
+                        hienThiDSCTHD(maHDClick);
+                    }
+                    else
+                        MessageBox.Show("Sửa thông tin CTHD thất bại");
+                }
+                else
+                {
+                    if (bHoaDon.SuaCTHD(cthd))
+                    {
+                        MessageBox.Show("Sửa thông tin CTHD thành công");
+                        hienThiDSCTHD(maHDClick);
+                    }
+                    else
+                        MessageBox.Show("Sửa thông tin CTHD thất bại");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Sửa thông tin CTHD thất bại");
+            }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CTHD cthd = new CTHD();
+                cthd.MaHD = maHDClick;
+                cthd.MaSP = int.Parse(cbten.SelectedValue.ToString());
+                cthd.SoLuong = int.Parse(numericsoluongdoan.Value.ToString());
+                cthd.GiamGia = 0;
+                cthd.DonGia = bSP.layTTSP(int.Parse(cbten.SelectedValue.ToString())).DonGia;
+
+                if (bHoaDon.XoaCTHD(cthd))
+                {
+                    MessageBox.Show("Xóa thông tin CTHD thành công");
+                    hienThiDSCTHD(maHDClick);
+                }
+                else
+                    MessageBox.Show("Xóa thông tin CTHD thất bại");
+            }
+            catch
+            {
+                MessageBox.Show("Xóa thông tin CTHD thất bại");
+            }
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
+            if (ktClick)
+            {
+                FThanhToan f = new FThanhToan();
+                f.Show();
+            }
+        }
 
+        private void gV_CTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex <= gV_CTHD.Rows.Count)
+            {               
+                foreach(CTHD cthd in bHoaDon.hienThiDSCTHD2(maHDClick))
+                {
+                    SanPham sp = bSP.layTTSP(cthd.MaSP);
+                    if (gV_CTHD.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(sp.TenSP))
+                    {
+                        cbdanhmuc.SelectedValue = sp.MaLoaiSP;
+                        cbten.SelectedValue = sp.MaSP;
+                        numericsoluongdoan.Value = decimal.Parse(gV_CTHD.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    }
+                }
+            }
+        }
+
+        private void cbdanhmuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bSP.layDSSP(int.Parse(cbdanhmuc.SelectedValue.ToString())) != null)
+                    bSP.hienThiDSSP2(cbten, int.Parse(cbdanhmuc.SelectedValue.ToString()));
+                else
+                {
+                    cbten.DataSource = null;
+                    cbten.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

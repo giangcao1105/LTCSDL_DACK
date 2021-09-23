@@ -26,12 +26,29 @@ namespace GUI_demo.BUS
             cb.DisplayMember = "TenSP";
             cb.ValueMember = "MaSP";
         }
+        public dynamic layDSSP(int maloai)
+        {
+            return dSanPham.hienThiDSSP3(maloai);
+        }
+        public SanPham layTTSP(int masp)
+        {
+            return dSanPham.layTTSP(masp);
+        }
+
+        public void hienThiDSSP2(ComboBox cb, int maloai)
+        {
+            cb.DataSource = dSanPham.hienThiDSSP3(maloai);
+            cb.DisplayMember = "TenSP";
+            cb.ValueMember = "MaSP";
+        }
         public void layLoaiSP(ComboBox cb, int maSP)
         {
             cb.DataSource = dSanPham.hienThiLoaiSP(maSP);
             cb.DisplayMember = "TenLoaiSP";
             cb.ValueMember = "MaLoaiSP";
         }
+
+
         public bool themSanPhan(SanPham sp)
         {
             //using (var trac = new TransactionScope())

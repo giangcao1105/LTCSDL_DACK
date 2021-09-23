@@ -65,9 +65,21 @@ namespace GUI_demo.BUS
             if (dHoaDon.KiemTraHD(hd))
             {
                 try
-                {                    
+                {
+
+                    foreach (CTHD cthd in dHoaDon.hienThiDSCTHD2(hd.MaHD))
+                    {
+                        try
+                        {
+                            XoaCTHD(cthd);
+                        }
+                        catch (Exception)
+                        {
+                            return false;
+                        }
+                    }
                     dHoaDon.XoaHoaDon(hd);
-                    return true;
+                    return true;                    
                 }
                 catch (DbUpdateException ex)
                 {
@@ -88,6 +100,10 @@ namespace GUI_demo.BUS
         public void hienThiDSCTHD(DataGridView dgv, int mahd)
         {
             dgv.DataSource = dHoaDon.hienThiDSCTHD(mahd);
+        }
+        public List<CTHD> hienThiDSCTHD2(int mahd)
+        {
+            return dHoaDon.hienThiDSCTHD2(mahd);
         }
         public CTHD layTTCTHD(int mahd, int masp)
         {

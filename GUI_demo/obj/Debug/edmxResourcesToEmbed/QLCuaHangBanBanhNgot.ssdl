@@ -53,6 +53,7 @@
     <Property Name="MaNV" Type="int" Nullable="false" />
     <Property Name="MaBan" Type="int" Nullable="false" />
     <Property Name="NgayBan" Type="datetime" Nullable="false" />
+    <Property Name="TrangThaiTT" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="Kho">
     <Key>
@@ -62,13 +63,12 @@
     <Property Name="MaSP" Type="int" Nullable="false" />
     <Property Name="NgayNhapSP" Type="datetime" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
-    <Property Name="DonGia" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>
       <PropertyRef Name="MaLoaiSP" />
     </Key>
-    <Property Name="MaLoaiSP" Type="int" Nullable="false" />
+    <Property Name="MaLoaiSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenLoaiSP" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -91,7 +91,6 @@
     <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenSP" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="MaLoaiSP" Type="int" Nullable="false" />
-    <Property Name="SoLuongTonKho" Type="int" />
     <Property Name="DonGia" Type="float" />
   </EntityType>
   <EntityType Name="sysdiagrams">

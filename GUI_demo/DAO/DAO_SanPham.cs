@@ -13,6 +13,10 @@ namespace GUI_demo.DAO
         {
             db = new QLCuaHangBanhNgotEntities();
         }
+        public SanPham layTTSP(int masp)
+        {
+            return db.SanPhams.Where(s => s.MaSP == masp).FirstOrDefault();
+        }
 
         public dynamic hienThiDSSP()
         {
@@ -33,6 +37,7 @@ namespace GUI_demo.DAO
             }).ToList();
             return sp;
         }
+
         public dynamic hienThiDSSP2()
         {
             var sp = db.SanPhams.Select(s => new {
@@ -43,7 +48,11 @@ namespace GUI_demo.DAO
             }).ToList();
             return sp;
         }
-
+        public dynamic hienThiDSSP3(int maloai)
+        {
+            var sp = db.SanPhams.Where(s=>s.MaLoaiSP == maloai).Select(s =>s).ToList();
+            return sp;
+        }
         public void themSP(SanPham sp)
         {
             db.SanPhams.Add(sp);

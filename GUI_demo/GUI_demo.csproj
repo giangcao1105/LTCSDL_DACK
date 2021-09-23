@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,8 +75,10 @@
     <Compile Include="BUS\BUS_Ban.cs" />
     <Compile Include="BUS\BUS_ChucVu.cs" />
     <Compile Include="BUS\BUS_HoaDon.cs" />
+    <Compile Include="BUS\BUS_Kho.cs" />
     <Compile Include="BUS\BUS_LoaiSanPham.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
+    <Compile Include="BUS\BUS_SanPham.cs" />
     <Compile Include="BUS\BUS_TaiKhoan.cs" />
     <Compile Include="ChucVu.cs">
       <DependentUpon>QLCuaHangBanBanhNgot.tt</DependentUpon>
@@ -92,8 +95,10 @@
     <Compile Include="DAO\DAO_Ban.cs" />
     <Compile Include="DAO\DAO_ChucVu.cs" />
     <Compile Include="DAO\DAO_HoaDon.cs" />
+    <Compile Include="DAO\DAO_Kho.cs" />
     <Compile Include="DAO\DAO_LoaiSanPham.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
+    <Compile Include="DAO\DAO_SanPham.cs" />
     <Compile Include="FChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +152,12 @@
     </Compile>
     <Compile Include="FQuanLyDatHang.Designer.cs">
       <DependentUpon>FQuanLyDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuanLyKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLyKho.Designer.cs">
+      <DependentUpon>FQuanLyKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FQuanLySanPham.cs">
       <SubType>Form</SubType>
@@ -243,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLyDatHang.resx">
       <DependentUpon>FQuanLyDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLyKho.resx">
+      <DependentUpon>FQuanLyKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLySanPham.resx">
       <DependentUpon>FQuanLySanPham.cs</DependentUpon>

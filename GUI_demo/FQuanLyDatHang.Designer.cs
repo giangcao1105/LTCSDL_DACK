@@ -95,10 +95,12 @@
             this.gV_CTHD.EnableHeadersVisualStyles = false;
             this.gV_CTHD.Location = new System.Drawing.Point(4, 26);
             this.gV_CTHD.Margin = new System.Windows.Forms.Padding(4);
+            this.gV_CTHD.MultiSelect = false;
             this.gV_CTHD.Name = "gV_CTHD";
             this.gV_CTHD.RowHeadersWidth = 62;
             this.gV_CTHD.Size = new System.Drawing.Size(819, 604);
             this.gV_CTHD.TabIndex = 0;
+            this.gV_CTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gV_CTHD_CellClick);
             // 
             // THUCDON
             // 
@@ -279,6 +281,7 @@
             this.cbdanhmuc.Name = "cbdanhmuc";
             this.cbdanhmuc.Size = new System.Drawing.Size(344, 32);
             this.cbdanhmuc.TabIndex = 2;
+            this.cbdanhmuc.SelectedIndexChanged += new System.EventHandler(this.cbdanhmuc_SelectedIndexChanged);
             // 
             // label2
             // 

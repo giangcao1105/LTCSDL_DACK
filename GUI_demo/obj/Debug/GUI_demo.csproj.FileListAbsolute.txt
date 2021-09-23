@@ -195,3 +195,4 @@ D:\Subject\LTCSDL\BTL\BTL\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.FChamCong.reso
 D:\Subject\LTCSDL\BTL\BTL\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.csproj.CopyComplete
 D:\Subject\LTCSDL\BTL\BTL\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.FQuanLyKho.resources
 >>>>>>> 867e2556e8588359e0ad1723cefb6b42ba222338
+D:\New folder\LTCSDL_DACK\GUI_demo\obj\Debug\GUI_demo.FQuanLyKho.resources

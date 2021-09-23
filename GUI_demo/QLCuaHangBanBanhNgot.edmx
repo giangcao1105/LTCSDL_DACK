@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLCuaHangBanhNgotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLCuaHangBanhNgotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="Username" />
@@ -58,6 +58,7 @@
           <Property Name="MaNV" Type="int" Nullable="false" />
           <Property Name="MaBan" Type="int" Nullable="false" />
           <Property Name="NgayBan" Type="datetime" Nullable="false" />
+          <Property Name="TrangThaiTT" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityType Name="Kho">
           <Key>
@@ -67,13 +68,12 @@
           <Property Name="MaSP" Type="int" Nullable="false" />
           <Property Name="NgayNhapSP" Type="datetime" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
-          <Property Name="DonGia" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="LoaiSP">
           <Key>
             <PropertyRef Name="MaLoaiSP" />
           </Key>
-          <Property Name="MaLoaiSP" Type="int" Nullable="false" />
+          <Property Name="MaLoaiSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenLoaiSP" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="NhanVien">
@@ -96,7 +96,6 @@
           <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenSP" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="MaLoaiSP" Type="int" Nullable="false" />
-          <Property Name="SoLuongTonKho" Type="int" />
           <Property Name="DonGia" Type="float" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -297,8 +296,7 @@
             <End Role="SanPham" EntitySet="SanPham" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLCuaHangBanhNgotModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -364,6 +362,7 @@
           <NavigationProperty Name="Ban" Relationship="Self.fk_HoaDon_Ban" FromRole="HoaDon" ToRole="Ban" />
           <NavigationProperty Name="CTHDs" Relationship="Self.fk_HoaDon_CTHD" FromRole="HoaDon" ToRole="CTHD" />
           <NavigationProperty Name="NhanVien" Relationship="Self.fk_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
+          <Property Name="TrangThaiTT" Type="Byte" Nullable="false" />
         </EntityType>
         <EntityType Name="Kho">
           <Key>
@@ -373,7 +372,6 @@
           <Property Name="MaSP" Type="Int32" Nullable="false" />
           <Property Name="NgayNhapSP" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
-          <Property Name="DonGia" Type="Double" Nullable="false" />
           <NavigationProperty Name="SanPham" Relationship="Self.fk_SanPham_Kho" FromRole="Kho" ToRole="SanPham" />
         </EntityType>
         <EntityType Name="LoaiSP">
@@ -408,7 +406,6 @@
           <Property Name="MaSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaLoaiSP" Type="Int32" Nullable="false" />
-          <Property Name="SoLuongTonKho" Type="Int32" />
           <Property Name="DonGia" Type="Double" />
           <NavigationProperty Name="CTHDs" Relationship="Self.fk_SanPham_CTHD" FromRole="SanPham" ToRole="CTHD" />
           <NavigationProperty Name="Khoes" Relationship="Self.fk_SanPham_Kho" FromRole="SanPham" ToRole="Kho" />
@@ -679,6 +676,7 @@
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="QLCuaHangBanhNgotModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="TrangThaiTT" ColumnName="TrangThaiTT" />
                 <ScalarProperty Name="MaHD" ColumnName="MaHD" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="MaBan" ColumnName="MaBan" />
@@ -692,7 +690,6 @@
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="NgayNhapSP" ColumnName="NgayNhapSP" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -724,7 +721,6 @@
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
                 <ScalarProperty Name="MaLoaiSP" ColumnName="MaLoaiSP" />
-                <ScalarProperty Name="SoLuongTonKho" ColumnName="SoLuongTonKho" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
               </MappingFragment>
             </EntityTypeMapping>

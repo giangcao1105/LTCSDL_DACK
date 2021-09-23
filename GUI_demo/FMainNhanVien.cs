@@ -30,6 +30,7 @@ namespace GUI_demo
         {
             FQuanLyDatHang f = new FQuanLyDatHang();
             f.StartPosition = FormStartPosition.CenterScreen;
+            f.manv = maNV;
             f.Show();
         }
     }
