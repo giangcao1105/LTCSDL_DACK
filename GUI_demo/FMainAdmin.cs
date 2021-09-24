@@ -52,5 +52,12 @@ namespace GUI_demo
             f.manv = maNV;
             f.Show();
         }
+
+        private void thongKeHoaDonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FThongKeHoaDon f = new FThongKeHoaDon();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }

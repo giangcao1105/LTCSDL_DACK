@@ -63,5 +63,10 @@ namespace GUI_demo.BUS
                 return false;
             }
         }
+
+        public dynamic baoCaoKho()
+        {
+            return dKho.baoCaoKho();
+        }
     }
 }

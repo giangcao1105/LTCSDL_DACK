@@ -44,5 +44,16 @@ namespace GUI_demo.DAO
             db.Khoes.Remove(l);
             db.SaveChanges();
         }
+
+        public dynamic baoCaoKho()
+        {
+            var sp = db.Khoes.Select(s => new{ 
+                s.MaSP,
+                s.SanPham.TenSP,
+                s.SoLuong,
+                s.NgayNhapSP
+            }).ToList();
+            return sp;
+        }
     }
 }
