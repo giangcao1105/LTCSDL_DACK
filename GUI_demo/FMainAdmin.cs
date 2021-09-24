@@ -36,6 +36,7 @@ namespace GUI_demo
         private void quanLyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FQuanLySanPham f = new FQuanLySanPham();
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 

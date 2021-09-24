@@ -150,5 +150,10 @@ namespace GUI_demo
             FQuanLyKho f = new FQuanLyKho();
             f.Show();
         }
+
+        private void btthoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

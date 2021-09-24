@@ -33,5 +33,12 @@ namespace GUI_demo
             f.manv = maNV;
             f.Show();
         }
+
+        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FQuanLySanPham f = new FQuanLySanPham();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }

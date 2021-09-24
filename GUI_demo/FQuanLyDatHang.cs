@@ -22,7 +22,7 @@ namespace GUI_demo
         bool ktClick, ktHoaDon;
         int maBanLonNhat = 0;
         int maBanClick;
-        int maHDClick;
+        int maHDClick = -1;
         public FQuanLyDatHang()
         {
             InitializeComponent();
@@ -99,6 +99,7 @@ namespace GUI_demo
             }
             else
             {
+                maHDClick = -1;
                 gV_CTHD.DataSource = null;
                 ktHoaDon = false;
             }
@@ -301,11 +302,13 @@ namespace GUI_demo
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            if (ktClick)
+            if (ktClick && maHDClick != -1 && bHoaDon.hienThiDSCTHD2(maHDClick).Count > 0)
             {
                 FThanhToan f = new FThanhToan();
                 f.Show();
             }
+            else
+                MessageBox.Show("Vui lòng chọn bàn để thanh toán!");
         }
 
         private void gV_CTHD_CellClick(object sender, DataGridViewCellEventArgs e)
