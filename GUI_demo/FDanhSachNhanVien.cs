@@ -26,7 +26,8 @@ namespace GUI_demo
         private void btThem_Click(object sender, EventArgs e)
         {
             FDangKy f = new FDangKy();
-            f.Show();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.ShowDialog();
             dg_nhanvien.DataSource = null;
             bNhanVien.hienThiDSNV(dg_nhanvien);
         }

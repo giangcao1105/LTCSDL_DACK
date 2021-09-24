@@ -41,7 +41,7 @@
             this.btThoat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btThoat.Location = new System.Drawing.Point(441, 210);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(140, 34);
             this.btThoat.TabIndex = 20;
@@ -54,7 +54,7 @@
             this.btDangNhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.btDangNhap.Location = new System.Drawing.Point(228, 210);
-            this.btDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(164, 34);
             this.btDangNhap.TabIndex = 19;
@@ -66,7 +66,7 @@
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(313, 128);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(311, 30);
             this.txtMatKhau.TabIndex = 17;
@@ -89,7 +89,7 @@
             // 
             this.txtTenTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTK.Location = new System.Drawing.Point(313, 69);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenTK.Name = "txtTenTK";
             this.txtTenTK.Size = new System.Drawing.Size(311, 30);
             this.txtTenTK.TabIndex = 16;
@@ -121,10 +121,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMatKhau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FDangNhap_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

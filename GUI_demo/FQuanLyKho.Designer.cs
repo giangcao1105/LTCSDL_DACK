@@ -103,6 +103,7 @@ namespace GUI_demo
             this.dgvKho.EnableHeadersVisualStyles = false;
             this.dgvKho.Location = new System.Drawing.Point(4, 26);
             this.dgvKho.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvKho.MultiSelect = false;
             this.dgvKho.Name = "dgvKho";
             this.dgvKho.RowHeadersWidth = 62;
             this.dgvKho.Size = new System.Drawing.Size(751, 540);

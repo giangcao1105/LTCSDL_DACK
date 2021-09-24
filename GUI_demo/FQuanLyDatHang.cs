@@ -22,7 +22,8 @@ namespace GUI_demo
         bool ktClick, ktHoaDon;
         int maBanLonNhat = 0;
         int maBanClick;
-        int maHDClick = -1;
+        int maHDClick = -2;
+        public static bool ktThanhToan = false;
         public FQuanLyDatHang()
         {
             InitializeComponent();
@@ -63,23 +64,23 @@ namespace GUI_demo
         public void loadDSBan()
         {
             flowLayoutPanel1.Controls.Clear();
-
+            bBan = new BUS_Ban();
             foreach (Ban b in bBan.layDSBan())
             {
                 maBanLonNhat = b.MaBan;
                 Button bt = new Button();
-                bt.Click += bt_click;// tạo sự kiện click cho button
-                bt.Tag = b; // dùng để xác định ID của mỗi button
-                bt.Width = 90;
-                bt.Height = 90;
+                bt.Click += bt_click;
+                bt.Tag = b;
+                bt.Width = 80;
+                bt.Height = 80;
                 bt.Text = b.MaBan + "\n" + b.TrangThai;
-                if (b.TrangThai == "Trống")
-                {
-                    bt.BackColor = Color.WhiteSmoke;
-                }
-                else if (b.TrangThai == "Có người")
+                if (b.TrangThai.Equals("Có người"))
                 {
                     bt.BackColor = Color.DarkRed;
+                }
+                else if (b.TrangThai.Equals("Trống"))
+                {
+                    bt.BackColor = Color.WhiteSmoke;
                 }
                 flowLayoutPanel1.Controls.Add(bt);
             }
@@ -122,6 +123,7 @@ namespace GUI_demo
                 bBan.TaoBan(b);
             }
             loadDSBan();
+            maHDClick = -2;
             DSMON.Text = "Danh sách món ăn của bàn:";
         }
 
@@ -136,6 +138,7 @@ namespace GUI_demo
                     {
                         MessageBox.Show("Xóa bàn thành công");
                         loadDSBan();
+                        maHDClick = -2;
                         DSMON.Text = "Danh sách món ăn của bàn:";
                     }
                     else
@@ -305,10 +308,24 @@ namespace GUI_demo
             if (ktClick && maHDClick != -1 && bHoaDon.hienThiDSCTHD2(maHDClick).Count > 0)
             {
                 FThanhToan f = new FThanhToan();
-                f.Show();
+                f.StartPosition = FormStartPosition.CenterScreen;
+                f.maban = maBanClick;
+                f.mahd = maHDClick;
+                f.ShowDialog();
+
+                if (ktThanhToan)
+                {
+                    gV_CTHD.DataSource = null;
+                    loadDSBan();
+                }
             }
-            else
+            else if (maHDClick == -2)
                 MessageBox.Show("Vui lòng chọn bàn để thanh toán!");
+            else
+            {
+                MessageBox.Show("Bàn trống, không có hóa đơn để thanh toán!");
+                maHDClick = -2;
+            }
         }
 
         private void gV_CTHD_CellClick(object sender, DataGridViewCellEventArgs e)

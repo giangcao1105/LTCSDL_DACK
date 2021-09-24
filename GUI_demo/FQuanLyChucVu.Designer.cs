@@ -53,9 +53,11 @@
             this.groupBox6.Controls.Add(this.btXoa);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.ForeColor = System.Drawing.Color.Red;
-            this.groupBox6.Location = new System.Drawing.Point(12, 334);
+            this.groupBox6.Location = new System.Drawing.Point(16, 411);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(391, 108);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(521, 133);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Chức năng";
@@ -67,9 +69,10 @@
             this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btSua.ForeColor = System.Drawing.Color.Black;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.Location = new System.Drawing.Point(149, 40);
+            this.btSua.Location = new System.Drawing.Point(199, 49);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(90, 45);
+            this.btSua.Size = new System.Drawing.Size(120, 55);
             this.btSua.TabIndex = 3;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = false;
@@ -81,9 +84,10 @@
             this.btThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThem.ForeColor = System.Drawing.Color.Black;
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(15, 40);
+            this.btThem.Location = new System.Drawing.Point(20, 49);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(90, 45);
+            this.btThem.Size = new System.Drawing.Size(120, 55);
             this.btThem.TabIndex = 3;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
@@ -95,9 +99,10 @@
             this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btXoa.ForeColor = System.Drawing.Color.Black;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(283, 40);
+            this.btXoa.Location = new System.Drawing.Point(377, 49);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(90, 45);
+            this.btXoa.Size = new System.Drawing.Size(120, 55);
             this.btXoa.TabIndex = 2;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = false;
@@ -109,9 +114,11 @@
             this.groupBox4.Controls.Add(this.dg_ChucVu);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox4.ForeColor = System.Drawing.Color.Red;
-            this.groupBox4.Location = new System.Drawing.Point(409, 12);
+            this.groupBox4.Location = new System.Drawing.Point(545, 15);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(353, 430);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(471, 529);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách chức vụ";
@@ -120,12 +127,13 @@
             // 
             this.dg_ChucVu.BackgroundColor = System.Drawing.Color.White;
             this.dg_ChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_ChucVu.Location = new System.Drawing.Point(4, 21);
-            this.dg_ChucVu.Margin = new System.Windows.Forms.Padding(2);
+            this.dg_ChucVu.Location = new System.Drawing.Point(5, 26);
+            this.dg_ChucVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dg_ChucVu.MultiSelect = false;
             this.dg_ChucVu.Name = "dg_ChucVu";
             this.dg_ChucVu.RowHeadersWidth = 62;
             this.dg_ChucVu.RowTemplate.Height = 28;
-            this.dg_ChucVu.Size = new System.Drawing.Size(343, 386);
+            this.dg_ChucVu.Size = new System.Drawing.Size(457, 475);
             this.dg_ChucVu.TabIndex = 0;
             // 
             // groupBox1
@@ -137,9 +145,11 @@
             this.groupBox1.Controls.Add(this.lbmanv);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 191);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(521, 235);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chức vụ";
@@ -149,29 +159,32 @@
             this.txtmanv.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtmanv.Enabled = false;
             this.txtmanv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtmanv.Location = new System.Drawing.Point(173, 45);
+            this.txtmanv.Location = new System.Drawing.Point(231, 55);
+            this.txtmanv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmanv.Multiline = true;
             this.txtmanv.Name = "txtmanv";
-            this.txtmanv.Size = new System.Drawing.Size(191, 26);
+            this.txtmanv.Size = new System.Drawing.Size(253, 31);
             this.txtmanv.TabIndex = 0;
             // 
             // txtTenChucVu
             // 
             this.txtTenChucVu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTenChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenChucVu.Location = new System.Drawing.Point(173, 108);
+            this.txtTenChucVu.Location = new System.Drawing.Point(231, 133);
+            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenChucVu.Multiline = true;
             this.txtTenChucVu.Name = "txtTenChucVu";
-            this.txtTenChucVu.Size = new System.Drawing.Size(191, 26);
+            this.txtTenChucVu.Size = new System.Drawing.Size(253, 31);
             this.txtTenChucVu.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(11, 105);
+            this.label8.Location = new System.Drawing.Point(15, 129);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 33);
+            this.label8.Size = new System.Drawing.Size(192, 41);
             this.label8.TabIndex = 1;
             this.label8.Text = "Tên chức vụ:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,21 +193,23 @@
             // 
             this.lbmanv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbmanv.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbmanv.Location = new System.Drawing.Point(11, 38);
+            this.lbmanv.Location = new System.Drawing.Point(15, 47);
+            this.lbmanv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbmanv.Name = "lbmanv";
-            this.lbmanv.Size = new System.Drawing.Size(136, 41);
+            this.lbmanv.Size = new System.Drawing.Size(181, 50);
             this.lbmanv.TabIndex = 0;
             this.lbmanv.Text = "Mã chức vụ:";
             this.lbmanv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FQuanLyChucVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 476);
+            this.ClientSize = new System.Drawing.Size(1024, 586);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FQuanLyChucVu";
             this.Text = "QUẢN LÝ CHỨC VỤ";
             this.groupBox6.ResumeLayout(false);

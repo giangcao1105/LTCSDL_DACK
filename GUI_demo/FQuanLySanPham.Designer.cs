@@ -106,6 +106,7 @@
             this.dg_monan.EnableHeadersVisualStyles = false;
             this.dg_monan.Location = new System.Drawing.Point(4, 26);
             this.dg_monan.Margin = new System.Windows.Forms.Padding(4);
+            this.dg_monan.MultiSelect = false;
             this.dg_monan.Name = "dg_monan";
             this.dg_monan.RowHeadersWidth = 62;
             this.dg_monan.Size = new System.Drawing.Size(751, 540);

@@ -69,5 +69,15 @@ namespace GUI_demo
             f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
+
+        private void FDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
