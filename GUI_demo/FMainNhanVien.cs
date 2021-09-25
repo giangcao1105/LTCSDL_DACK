@@ -40,5 +40,12 @@ namespace GUI_demo
             f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
+
+        private void chamCongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FChamCongNV f = new FChamCongNV();
+            f.MaNV = maNV;
+            f.Show();
+        }
     }
 }

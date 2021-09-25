@@ -18,8 +18,8 @@ namespace GUI_demo
         public NhanVien()
         {
             this.Accounts = new HashSet<Account>();
-            this.BangChamCongs = new HashSet<BangChamCong>();
             this.HoaDons = new HashSet<HoaDon>();
+            this.BangChamCongs = new HashSet<BangChamCong>();
         }
     
         public int MaNV { get; set; }
@@ -33,10 +33,10 @@ namespace GUI_demo
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Account> Accounts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BangChamCong> BangChamCongs { get; set; }
         public virtual ChucVu ChucVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BangChamCong> BangChamCongs { get; set; }
     }
 }
