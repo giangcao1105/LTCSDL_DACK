@@ -68,5 +68,10 @@ namespace GUI_demo.BUS
         {
             return dKho.baoCaoKho();
         }
+
+        public void timKiemKho(DataGridView dgv,String str)
+        {
+                dgv.DataSource = dKho.timKiemKho(str);
+        }
     }
 }

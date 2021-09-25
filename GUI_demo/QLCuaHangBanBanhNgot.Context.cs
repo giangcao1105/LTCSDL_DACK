@@ -29,7 +29,6 @@ namespace GUI_demo
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Ban> Bans { get; set; }
-        public virtual DbSet<BangChamCong> BangChamCongs { get; set; }
         public virtual DbSet<ChucVu> ChucVus { get; set; }
         public virtual DbSet<CTHD> CTHDs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
@@ -37,7 +36,7 @@ namespace GUI_demo
         public virtual DbSet<LoaiSP> LoaiSPs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<BangChamCong> BangChamCongs { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -155,5 +155,10 @@ namespace GUI_demo
         {
             this.Close();
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            bSanPham.hienThiDSSPTimKiem(dg_monan, txtTimKiem.Text);
+        }
     }
 }

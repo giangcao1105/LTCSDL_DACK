@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_indanhsach = new System.Windows.Forms.DataGridView();
             this.dg_monan = new System.Windows.Forms.DataGridView();
@@ -47,12 +47,14 @@
             this.btSua = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btHuy = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
+            this.btTimKiem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.themToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_indanhsach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_monan)).BeginInit();
@@ -94,14 +96,14 @@
             this.dg_monan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dg_monan.BackgroundColor = System.Drawing.Color.Azure;
             this.dg_monan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_monan.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_monan.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_monan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_monan.EnableHeadersVisualStyles = false;
             this.dg_monan.Location = new System.Drawing.Point(4, 26);
@@ -117,6 +119,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.txtMaSP);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
@@ -249,7 +253,7 @@
             this.groupBox6.Controls.Add(this.btSua);
             this.groupBox6.Controls.Add(this.btThem);
             this.groupBox6.Controls.Add(this.btHuy);
-            this.groupBox6.Controls.Add(this.btLuu);
+            this.groupBox6.Controls.Add(this.btTimKiem);
             this.groupBox6.Controls.Add(this.btXoa);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.ForeColor = System.Drawing.Color.Red;
@@ -317,18 +321,19 @@
             this.btHuy.Text = "Hủy";
             this.btHuy.UseVisualStyleBackColor = false;
             // 
-            // btLuu
+            // btTimKiem
             // 
-            this.btLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btLuu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btLuu.Location = new System.Drawing.Point(391, 46);
-            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(120, 55);
-            this.btLuu.TabIndex = 3;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = false;
+            this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btTimKiem.Location = new System.Drawing.Point(391, 46);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(120, 55);
+            this.btTimKiem.TabIndex = 3;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.UseVisualStyleBackColor = false;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // btXoa
             // 
@@ -377,6 +382,25 @@
             this.themKhoToolStripMenuItem.Text = "Thêm kho";
             this.themKhoToolStripMenuItem.Click += new System.EventHandler(this.themKhoToolStripMenuItem_Click);
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(161, 305);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(272, 29);
+            this.txtTimKiem.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(4, 311);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 20);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Nội dung tìm kiếm:";
+            // 
             // FQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -422,7 +446,7 @@
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btHuy;
-        private System.Windows.Forms.Button btLuu;
+        private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem themToolStripMenuItem;
@@ -430,5 +454,7 @@
         private System.Windows.Forms.ToolStripMenuItem themKhoToolStripMenuItem;
         private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

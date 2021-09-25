@@ -140,5 +140,13 @@ namespace GUI_demo
                 bSanPham.layLoaiSP(cbDanhMuc, Int32.Parse(cbTenDoUong.SelectedValue.ToString())); 
             }
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "")
+                bKho.hienThiKho(dgvKho);
+            else
+                bKho.timKiemKho(dgvKho,txtTimKiem.Text);
+        }
     }
 }

@@ -55,5 +55,17 @@ namespace GUI_demo.DAO
             }).ToList();
             return sp;
         }
+
+        public dynamic timKiemKho(String str)
+        {
+            var sp = db.Khoes.Where(w => w.SanPham.TenSP.Contains(str)).Select(s => new {
+                s.MaSP,
+                s.SanPham.TenSP,
+                s.NgayNhapSP,
+                s.SoLuong,
+                s.SanPham.LoaiSP.TenLoaiSP
+            }).ToList();
+            return sp;
+        }
     }
 }

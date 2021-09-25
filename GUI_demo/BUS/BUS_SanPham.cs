@@ -93,5 +93,14 @@ namespace GUI_demo.BUS
                 return false;
             }
         }
+        public void hienThiDSSPTimKiem(DataGridView dgv, String str)
+        {
+            if (str == "")
+            {
+                dgv.DataSource = dSanPham.hienThiDSSP();
+            }
+            else
+                dgv.DataSource = dSanPham.timKiemSP(str);
+        }
     }
 }

@@ -83,5 +83,16 @@ namespace GUI_demo.DAO
             db.SanPhams.Remove(l);
             db.SaveChanges();
         }
+
+        public dynamic timKiemSP(String str)
+        {
+            var sp = db.SanPhams.Where(s => s.TenSP.Contains(str)).Select(s => new {
+                s.MaSP,
+                s.TenSP,
+                s.LoaiSP.TenLoaiSP,
+                s.DonGia
+            }).ToList();
+            return sp;
+        }
     }
 }
