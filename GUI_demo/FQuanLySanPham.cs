@@ -27,6 +27,7 @@ namespace GUI_demo
         private void themToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FDanhMuc f = new FDanhMuc();
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
@@ -148,6 +149,7 @@ namespace GUI_demo
         private void themKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FQuanLyKho f = new FQuanLyKho();
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 

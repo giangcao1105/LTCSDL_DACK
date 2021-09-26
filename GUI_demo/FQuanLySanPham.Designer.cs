@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_indanhsach = new System.Windows.Forms.DataGridView();
             this.dg_monan = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,10 +53,7 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.themToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.themSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_indanhsach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_monan)).BeginInit();
@@ -96,14 +95,14 @@
             this.dg_monan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dg_monan.BackgroundColor = System.Drawing.Color.Azure;
             this.dg_monan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_monan.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_monan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dg_monan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_monan.EnableHeadersVisualStyles = false;
             this.dg_monan.Location = new System.Drawing.Point(4, 26);
@@ -141,12 +140,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Menu";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(4, 311);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 20);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Nội dung tìm kiếm:";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(175, 305);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(272, 29);
+            this.txtTimKiem.TabIndex = 16;
+            // 
             // txtMaSP
             // 
             this.txtMaSP.BackColor = System.Drawing.Color.Azure;
             this.txtMaSP.Enabled = false;
             this.txtMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaSP.Location = new System.Drawing.Point(161, 41);
+            this.txtMaSP.Location = new System.Drawing.Point(175, 41);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(272, 26);
@@ -183,7 +201,7 @@
             this.cbtendm.BackColor = System.Drawing.Color.Azure;
             this.cbtendm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbtendm.FormattingEnabled = true;
-            this.cbtendm.Location = new System.Drawing.Point(161, 231);
+            this.cbtendm.Location = new System.Drawing.Point(175, 231);
             this.cbtendm.Margin = new System.Windows.Forms.Padding(4);
             this.cbtendm.Name = "cbtendm";
             this.cbtendm.Size = new System.Drawing.Size(272, 28);
@@ -206,7 +224,7 @@
             // 
             this.txtdongia.BackColor = System.Drawing.Color.Azure;
             this.txtdongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtdongia.Location = new System.Drawing.Point(161, 163);
+            this.txtdongia.Location = new System.Drawing.Point(175, 163);
             this.txtdongia.Margin = new System.Windows.Forms.Padding(4);
             this.txtdongia.Name = "txtdongia";
             this.txtdongia.Size = new System.Drawing.Size(272, 26);
@@ -216,7 +234,7 @@
             // 
             this.txttendouong.BackColor = System.Drawing.Color.Azure;
             this.txttendouong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txttendouong.Location = new System.Drawing.Point(161, 96);
+            this.txttendouong.Location = new System.Drawing.Point(175, 96);
             this.txttendouong.Margin = new System.Windows.Forms.Padding(4);
             this.txttendouong.Name = "txttendouong";
             this.txttendouong.Size = new System.Drawing.Size(272, 26);
@@ -353,7 +371,6 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.themToolStripMenuItem,
-            this.themSPToolStripMenuItem,
             this.themKhoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -369,37 +386,12 @@
             this.themToolStripMenuItem.Text = "Thêm danh mục";
             this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
             // 
-            // themSPToolStripMenuItem
-            // 
-            this.themSPToolStripMenuItem.Name = "themSPToolStripMenuItem";
-            this.themSPToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.themSPToolStripMenuItem.Text = "Thêm sản phẩm";
-            // 
             // themKhoToolStripMenuItem
             // 
             this.themKhoToolStripMenuItem.Name = "themKhoToolStripMenuItem";
             this.themKhoToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.themKhoToolStripMenuItem.Text = "Thêm kho";
             this.themKhoToolStripMenuItem.Click += new System.EventHandler(this.themKhoToolStripMenuItem_Click);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(161, 305);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(272, 29);
-            this.txtTimKiem.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(4, 311);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Nội dung tìm kiếm:";
             // 
             // FQuanLySanPham
             // 
@@ -450,7 +442,6 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem themToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem themSPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themKhoToolStripMenuItem;
         private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label6;

@@ -114,6 +114,7 @@
             this.thốngKêDoanhThuToolStripMenuItem.Name = "thốngKêDoanhThuToolStripMenuItem";
             this.thốngKêDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.thốngKêDoanhThuToolStripMenuItem.Text = "Thống kê tổng doanh thu";
+            this.thốngKêDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.thốngKêDoanhThuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -132,6 +133,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMainAdmin";
             this.Text = "FMainAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMainAdmin_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

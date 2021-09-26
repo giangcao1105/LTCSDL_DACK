@@ -44,8 +44,19 @@ namespace GUI_demo
         private void chamCongToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FChamCongNV f = new FChamCongNV();
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.MaNV = maNV;
             f.Show();
+        }
+
+        private void FMainNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

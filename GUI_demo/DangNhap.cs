@@ -22,12 +22,7 @@ namespace GUI_demo
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            DialogResult dr;
-            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.Close();
         }
 
         private void btDangNhap_Click(object sender, EventArgs e)
@@ -73,10 +68,10 @@ namespace GUI_demo
         private void FDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr;
-            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
             {
-                Application.Exit();
+                e.Cancel = true;
             }
         }
     }

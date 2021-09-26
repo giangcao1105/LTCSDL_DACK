@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GUI_demo.BUS;
+using GUI_demo.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,12 @@ namespace GUI_demo
     public partial class FMainAdmin : Form
     {
         public int maNV;
+        BUS_HoaDon bHD;
+        DateTime d1, d2;
         public FMainAdmin()
         {
             InitializeComponent();
+            bHD = new BUS_HoaDon();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +63,25 @@ namespace GUI_demo
         {
             FThongKeHoaDon f = new FThongKeHoaDon();
             f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
+
+        private void FMainAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void thốngKêDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FTongDT f = new FTongDT();   
+            CRBaoCaoDoanhThu cr = new CRBaoCaoDoanhThu();
+            cr.SetDataSource(bHD.baoCaoDoanhThu(d1, d2));
+            f.crystalReportViewer1.ReportSource = cr;
             f.Show();
         }
     }
