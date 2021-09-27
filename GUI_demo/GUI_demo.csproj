@@ -73,6 +73,7 @@
       <DependentUpon>QLCuaHangBanBanhNgot.tt</DependentUpon>
     </Compile>
     <Compile Include="BUS\BUS_Ban.cs" />
+    <Compile Include="BUS\BUS_ChamCong.cs" />
     <Compile Include="BUS\BUS_ChucVu.cs" />
     <Compile Include="BUS\BUS_HoaDon.cs" />
     <Compile Include="BUS\BUS_Kho.cs" />
@@ -93,17 +94,35 @@
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_Ban.cs" />
+    <Compile Include="DAO\DAO_ChamCong.cs" />
     <Compile Include="DAO\DAO_ChucVu.cs" />
     <Compile Include="DAO\DAO_HoaDon.cs" />
     <Compile Include="DAO\DAO_Kho.cs" />
     <Compile Include="DAO\DAO_LoaiSanPham.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="DAO\DAO_SanPham.cs" />
+    <Compile Include="dstBaoCaoHangHoa.cs">
+      <DependentUpon>dstBaoCaoHangHoa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dstBaoCaoHangHoa.Designer.cs">
+      <DependentUpon>dstBaoCaoHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dstBaoCaoHangHoa1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstBaoCaoHangHoa.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FChamCong.Designer.cs">
       <DependentUpon>FChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChamCongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChamCongNV.Designer.cs">
+      <DependentUpon>FChamCongNV.cs</DependentUpon>
     </Compile>
     <Compile Include="FCTHD.cs">
       <SubType>Form</SubType>
@@ -231,6 +250,9 @@
     <EmbeddedResource Include="FChamCong.resx">
       <DependentUpon>FChamCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChamCongNV.resx">
+      <DependentUpon>FChamCongNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCTHD.resx">
       <DependentUpon>FCTHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +302,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dstBaoCaoHangHoa.xsc">
+      <DependentUpon>dstBaoCaoHangHoa.xsd</DependentUpon>
+    </None>
+    <None Include="dstBaoCaoHangHoa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstBaoCaoHangHoa1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstBaoCaoHangHoa.xss">
+      <DependentUpon>dstBaoCaoHangHoa.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

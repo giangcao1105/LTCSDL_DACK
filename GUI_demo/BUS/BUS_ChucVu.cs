@@ -22,5 +22,49 @@ namespace GUI_demo.BUS
             cb.DisplayMember = "TenChucVu";
             cb.ValueMember = "MaChucVu";
         }
+
+        public void hienThiDsChucVu(DataGridView dgv)
+        {
+            dgv.DataSource = dChucVu.hienThiDSChucVu();
+        }
+
+        public bool themChucVu(ChucVu cv)
+        {
+            try
+            {
+                dChucVu.themChucVu(cv);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool suaChucVu(int macv, ChucVu cv)
+        {
+            try
+            {
+                dChucVu.suaChucVu(macv, cv);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool xoaChucVu(int macv)
+        {
+            try
+            {
+                dChucVu.xoaChucVu(macv);
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+        }
     }
 }
